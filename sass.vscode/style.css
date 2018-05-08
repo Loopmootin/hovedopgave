@@ -1,8 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-form label {
+.header {
+  top: 0;
+  margin-bottom: 20px;
+}
+
+.header .menu .menu-item {
+  height: 80px;
+  width: 20%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .menu .menu-item a {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .menu-mobile {
+  display: none;
+  background: #000;
+  width: 100%;
+  height: 80px;
+}
+
+.header .menu-desktop {
+  display: block;
+  background: #475832;
+  width: 100%;
+  height: 80px;
+}
+
+@media (max-width: 800px) {
+  .header .menu {
+    height: 100%;
+  }
+  .header .menu .menu-item {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .menu .menu-item a {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .menu-mobile {
+    display: block;
+  }
+  .header .menu-desktop {
+    display: none;
+  }
+}
+
+.container .container-item {
+  display: block;
+}
+
+.container .container-item .container-form {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  position: relative;
+  padding-left: 40px;
+  z-index: 1;
+}
+
+.container .container-item .container-form h2 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.container .container-item .container-form .plus-icon {
+  width: 30px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 200;
+}
+
+.container .container-item .container-form .create-food {
+  display: none;
+}
+
+.container .container-item .container-form .create-dish {
+  display: none;
+}
+
+.container .container-item .container-form .create-foodplan {
+  display: none;
+}
+
+.container .container-item .container-form form {
+  width: calc(100% - 120px);
+  margin: 0 auto;
+  padding: 20px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+
+.container .container-item .container-form form label {
   color: red;
 }
 /*# sourceMappingURL=style.css.map */
