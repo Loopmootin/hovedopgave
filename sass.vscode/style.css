@@ -7,6 +7,10 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body p {
+  font-size: 16px;
+}
+
 .header {
   top: 0;
   margin-bottom: 20px;
@@ -44,13 +48,10 @@ body {
 }
 
 @media (max-width: 800px) {
-  .header .menu {
-    height: 100%;
-  }
   .header .menu .menu-item {
     height: 80px;
     width: 100%;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
   }
@@ -58,8 +59,6 @@ body {
     width: 100%;
     padding: 30px 0;
     text-align: center;
-    align-items: center;
-    justify-content: center;
   }
   .header .menu-mobile {
     display: block;
@@ -67,6 +66,11 @@ body {
   .header .menu-desktop {
     display: none;
   }
+}
+
+.container {
+  display: block;
+  margin-bottom: 50px;
 }
 
 .container .container-item {
@@ -98,6 +102,10 @@ body {
   left: 5px;
 }
 
+.container .container-item .container-form .exp-bar :hover {
+  cursor: pointer;
+}
+
 .container .container-item .container-form .create-food,
 .container .container-item .container-form .create-dish,
 .container .container-item .container-form .create-foodplan {
@@ -121,6 +129,7 @@ body {
   position: absolute;
   top: 39px;
   left: 10%;
+  pointer-events: none;
 }
 
 .container .container-item .container-form form .item input[type=number],

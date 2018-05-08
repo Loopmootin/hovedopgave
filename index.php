@@ -45,8 +45,12 @@
                             <input type="number" required><br />
                         </div>
                         <div class="item">
-                            <label>Vægt</label><br />
+                            <label>Vægt i gram</label><br />
                             <input type="number" required><br />
+                        </div>
+                        <div class="item">
+                            <label>Kategori</label><br />
+                            <input type="text" required><br />
                         </div>
                         <input type="submit" name="Create" value="submit">
                     </form>

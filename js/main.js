@@ -7,7 +7,7 @@ $(document).ready(function () {
         });
     });
 
-    $("input[type=text]").click(function () {
+    $("input[type=text]").focus(function () {
         $(this).siblings("label").css({
             fontSize: 10,
             top: 30,
@@ -15,11 +15,29 @@ $(document).ready(function () {
         });
     });
 
-    $("input[type=number]").click(function () {
+    $("input[type=text]").blur(function () {
+        $(this).siblings("label").css({
+            fontSize: 16,
+            top: 39,
+            transition: "0.5s"
+        });
+    });
+
+    $("input[type=number]").focus(function () {
         $(this).siblings("label").css({
             fontSize: 10,
             top: 30,
             transition: "0.5s"
         });
     });
+
+    $("input[type=number]").blur(function () {
+        $(this).siblings("label").css({
+            fontSize: 16,
+            top: 39,
+            transition: "0.5s"
+        });
+    });
+
+
 });
