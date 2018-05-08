@@ -78,31 +78,28 @@ body {
   margin: 0 auto;
   border: 1px solid #eee;
   position: relative;
-  padding-left: 40px;
   z-index: 1;
 }
 
-.container .container-item .container-form h2 {
+.container .container-item .container-form .exp-bar {
+  border-bottom: 1px solid #eee;
+  padding-left: 40px;
+}
+
+.container .container-item .container-form .exp-bar h2 {
   text-align: center;
   padding: 10px 0;
 }
 
-.container .container-item .container-form .plus-icon {
+.container .container-item .container-form .exp-bar .plus-icon {
   width: 30px;
   position: absolute;
   top: 10px;
   left: 5px;
-  z-index: 200;
 }
 
-.container .container-item .container-form .create-food {
-  display: none;
-}
-
-.container .container-item .container-form .create-dish {
-  display: none;
-}
-
+.container .container-item .container-form .create-food,
+.container .container-item .container-form .create-dish,
 .container .container-item .container-form .create-foodplan {
   display: none;
 }
@@ -113,10 +110,38 @@ body {
   padding: 20px;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
-  border-top: 1px solid #eee;
 }
 
-.container .container-item .container-form form label {
-  color: red;
+.container .container-item .container-form form .item {
+  position: relative;
+}
+
+.container .container-item .container-form form .item label {
+  color: #222;
+  position: absolute;
+  top: 39px;
+  left: 10%;
+}
+
+.container .container-item .container-form form .item input[type=number],
+.container .container-item .container-form form .item input[type=text] {
+  margin: 10px auto;
+  padding: 12px 12px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  width: 80%;
+  min-width: 200px;
+  display: block;
+}
+
+.container .container-item .container-form form input[type=submit] {
+  padding: 12px 12px;
+  border-radius: 4px;
+  background: #475832;
+  color: #fff;
+  border: none;
+  margin: 10px auto;
+  display: block;
+  min-width: 80px;
 }
 /*# sourceMappingURL=style.css.map */

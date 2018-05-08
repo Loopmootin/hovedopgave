@@ -12,6 +12,15 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+$my-text: #222;
+$my-red: red;
+$my-green: green;
+$my-blue: blue;
+
+$large-size: 1200px;
+$medium-size: 800px;
+$small-size: 420px;
+
 
 ///////////////////////// MENU /////////////////////////
 
@@ -88,25 +97,24 @@ body {
             margin: 0 auto;
             border: 1px solid #eee;
             position: relative;
-            padding-left: 40px;
             z-index: 1;
-            h2 {
-                text-align: center;
-                padding: 10px 0;
+            .exp-bar {
+                border-bottom: 1px solid #eee;
+                padding-left: 40px;
+                h2 {
+                    text-align: center;
+                    padding: 10px 0;
+                }
+
+                .plus-icon {
+                    width: 30px;
+                    position: absolute;
+                    top: 10px;
+                    left: 5px;
+                }
             }
-            .plus-icon {
-                width: 30px;
-                position: absolute;
-                top: 10px;
-                left: 5px;
-                z-index: 200;
-            }
-            .create-food {
-                display: none;
-            }
-            .create-dish {
-                display: none;
-            }
+            .create-food,
+            .create-dish,
             .create-foodplan {
                 display: none;
             }
@@ -116,9 +124,35 @@ body {
                 padding: 20px;
                 border-left: 1px solid #eee;
                 border-right: 1px solid #eee;
-                border-top: 1px solid #eee;
-                label {
-                    color: red;
+                .item {
+                    position: relative;
+                    label {
+                        color: $my-text;
+                        position: absolute;
+                        top: 39px;
+                        left: 10%;
+                    }
+
+                    input[type=number],
+                    input[type=text] {
+                        margin: 10px auto;
+                        padding: 12px 12px;
+                        border: 1px solid #eee;
+                        border-radius: 4px;
+                        width: 80%;
+                        min-width: 200px;
+                        display: block;
+                    }
+                }
+                input[type=submit] {
+                    padding: 12px 12px;
+                    border-radius: 4px;
+                    background: #475832;
+                    color: #fff;
+                    border: none;
+                    margin: 10px auto;
+                    display: block;
+                    min-width: 80px;
                 }
             }
         }

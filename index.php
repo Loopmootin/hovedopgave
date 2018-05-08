@@ -28,15 +28,26 @@
     <div class="container">
         <div class="container-item">
             <div class="container-form">
-                <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
-                <h2>Opret en fødevarer</h2>
+                <div class="exp-bar">
+                    <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
+                    <h2>Opret en fødevarer</h2>
+                </div>
+                
                 <div class="create-food">
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-                        <label>Create a food item:</label><br />
-                        <label>Navn:</label>
-                        <input type="text" placeholder="Ex Carrot" required><br />
-                        <label>Pris:</label>
-                        <input type="number" placeholder="99" required><br />
+                        <h3>Opret en fødevarer:</h3><br />
+                        <div class="item">
+                            <label>Navn</label><br />
+                            <input type="text" required><br />
+                        </div>
+                        <div class="item">
+                            <label>Pris</label><br />
+                            <input type="number" required><br />
+                        </div>
+                        <div class="item">
+                            <label>Vægt</label><br />
+                            <input type="number" required><br />
+                        </div>
                         <input type="submit" name="Create" value="submit">
                     </form>
                 </div>
@@ -45,15 +56,20 @@
 
         <div class="container-item">
             <div class="container-form">
-                <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
-                <h2>Lav en ret</h2>
+                <div class="exp-bar">
+                    <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
+                    <h2>Lav en ret</h2>
+                </div>
                 <div class="create-dish">
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-                        <label>Create a food item:</label><br />
-                        <label>Navn:</label>
-                        <input type="text" placeholder="Ex Carrot" required><br />
-                        <label>Pris:</label>
-                        <input type="number" placeholder="99" required><br />
+                        <label>Vælg varer</label><br />
+                        <div class="item">
+                            <label>Navn</label><br />
+                            <input type="text" required><br />
+                        </div>
+                        <div class="item">
+                            <input type="file" required><br />
+                        </div>
                         <input type="submit" name="Create" value="submit">
                     </form>
                 </div>
@@ -62,15 +78,17 @@
 
         <div class="container-item">
             <div class="container-form">
-                <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
-                <h2>Lav en Madplan</h2>
+                <div class="exp-bar">
+                    <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
+                    <h2>Lav en Madplan</h2>
+                </div>
                 <div class="create-foodplan">
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-                        <label>Create a food item:</label><br />
-                        <label>Navn:</label>
-                        <input type="text" placeholder="Ex Carrot" required><br />
-                        <label>Pris:</label>
-                        <input type="number" placeholder="99" required><br />
+                        <label>Vælg retter:</label><br />
+                        <div class="item">
+                            <label>Navn</label><br />
+                            <input type="text" required><br />
+                        </div>
                         <input type="submit" name="Create" value="submit">
                     </form>
                 </div>
