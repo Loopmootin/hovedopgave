@@ -26,7 +26,7 @@
             move_uploaded_file($sourcePath,$targetPath) ; // Moving Uploaded file
             echo "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
 
-            require_once('db_con.php');
+            /*require_once('db_con.php');
             
             $sql = 'INSERT INTO image(id, url) VALUES (?,?)';
             $stmt = $con->prepare($sql);
@@ -36,7 +36,7 @@
                 echo 'Filedata added to the database :-)';
             } else {
                 echo 'Could not add the file to the database';
-            }
+            }*/
 
         }}} else {
 

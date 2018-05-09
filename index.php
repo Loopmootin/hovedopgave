@@ -72,16 +72,18 @@
                     <h2>Lav en ret</h2>
                 </div>
                 <div class="create-dish">
-                    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-                        <label>Vælg varer</label><br />
+                    <form id="uploadimage" class="uploadimage" action="" method="post" enctype="multipart/form-data">
                         <div class="item">
-                            <label>Navn</label><br />
+                            <label>Rettens navn</label><br />
                             <input type="text" required><br />
                         </div>
                         <div class="item">
+                            <label for="file" class="custom-file">Upload Billede</label><br />
                             <input type="file" name="file" id="file" required /><br />
+                            <span id="file-selected"></span><br />
+                            <span id="message"></span><br />
+                            <input type="submit" value="Upload" name="Create" />
                         </div>
-                        <input type="submit" name="Create" value="submit">
                     </form>
                 </div>
             </div>
@@ -108,7 +110,7 @@
     </div>
 
     <?php
-        include('php/footer.php');
+        //include('php/footer.php');
     ?> 
     </body>
 </html>

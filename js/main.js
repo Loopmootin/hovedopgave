@@ -1,6 +1,6 @@
 
 
-$(document).ready(function () {
+$(document).ready(function (e) {
 
     ////////////////MENU///////////////////
 
@@ -25,11 +25,13 @@ $(document).ready(function () {
     });
 
     $("input[type=text]").blur(function () {
-        $(this).siblings("label").css({
-            fontSize: 16,
-            top: 39,
-            transition: "0.5s"
-        });
+        if (!this.value) {
+            $(this).siblings("label").css({
+                fontSize: 16,
+                top: 39,
+                transition: "0.5s"
+            });
+        }
     });
 
     $("input[type=number]").focus(function () {
@@ -41,21 +43,29 @@ $(document).ready(function () {
     });
 
     $("input[type=number]").blur(function () {
-        $(this).siblings("label").css({
-            fontSize: 16,
-            top: 39,
-            transition: "0.5s"
-        });
+        if (!this.value) {
+            $(this).siblings("label").css({
+                fontSize: 16,
+                top: 39,
+                transition: "0.5s"
+            });
+        }
     });
 
 
     /////////////////// UPLOAD IMAGE/////////////////////
 
-    $("#uploadimage").on('submit', (function () {
+    $('#file').on('change', function () {
+        var fileName = '';
+        fileName = $(this).val();
+        $('#file-selected').html(fileName);
+    });
+
+    $("#uploadimage").on('submit', (function (e) {
         e.preventDefault();
         $("#message").empty();
         $.ajax({
-            url: "upload_img.php", // Url to which the request is send
+            url: "php/upload_img.php", // Url to which the request is send
             type: "POST", // Type of request to be send, called as method
             data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
             contentType: false, // The content type used when sending data to the server.

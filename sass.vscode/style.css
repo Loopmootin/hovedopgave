@@ -169,6 +169,20 @@ body p {
   pointer-events: none;
 }
 
+.container .container-item .container-form form .item .custom-file {
+  padding: 12px 12px;
+  border-radius: 4px;
+  background: #adca88;
+  color: #fff;
+  border: none;
+  margin: 10px auto;
+  display: block;
+  min-width: 80px;
+  pointer-events: auto;
+  position: static;
+  text-align: center;
+}
+
 .container .container-item .container-form form .item input[type=number],
 .container .container-item .container-form form .item input[type=text] {
   margin: 10px auto;
@@ -189,6 +203,10 @@ body p {
   margin: 10px auto;
   display: block;
   min-width: 80px;
+}
+
+#file {
+  display: none;
 }
 
 @media only screen and (max-width: 650px) {
