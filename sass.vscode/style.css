@@ -5,6 +5,8 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
 
 body p {
@@ -139,6 +141,14 @@ body p {
   display: none;
 }
 
+.container .container-item .container-form .create-food .item-check .half-block {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .container .container-item .container-form form {
   width: calc(100% - 120px);
   margin: 0 auto;
@@ -189,5 +199,15 @@ body p {
   .container .container-item .container-form form .item input[type=text] {
     min-width: 0;
   }
+}
+
+.footer {
+  position: absolute;
+  bottom: -40px;
+  height: 40px;
+  background: #adca88;
+  width: 100%;
+  text-align: center;
+  z-index: 200;
 }
 /*# sourceMappingURL=style.css.map */

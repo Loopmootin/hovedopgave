@@ -42,9 +42,22 @@
                             <label>Vægt i gram</label><br />
                             <input type="number" required><br />
                         </div>
-                        <div class="item">
-                            <label>Kategori</label><br />
-                            <input type="text" required><br />
+                        <div class="item-check">
+                            <div class="half-block">
+                                <label for="cb-diary">Diary</label><br />
+                                <input id="cb-diary" type="checkbox"><br />
+
+                                <label for="cb-gluten">Gluten</label><br />
+                                <input id="cb-gluten" type="checkbox"><br />
+                            </div>
+                            
+                            <div class="half-block">
+                                <label for="cb-fruit">Fruit</label><br />
+                                <input id="cb-fruit" type="checkbox"><br />
+
+                                <label for="cb-vegetable">Vegetable</label><br />
+                                <input id="cb-vegetable" type="checkbox"><br />
+                            </div>
                         </div>
                         <input type="submit" name="Create" value="submit">
                     </form>
@@ -66,7 +79,7 @@
                             <input type="text" required><br />
                         </div>
                         <div class="item">
-                            <input type="file" required><br />
+                            <input type="file" name="file" id="file" required /><br />
                         </div>
                         <input type="submit" name="Create" value="submit">
                     </form>
@@ -93,6 +106,9 @@
             </div>
         </div>
     </div>
-        
+
+    <?php
+        include('php/footer.php');
+    ?> 
     </body>
 </html>
