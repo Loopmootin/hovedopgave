@@ -2,6 +2,15 @@
 
 $(document).ready(function () {
 
+    ////////////////MENU///////////////////
+
+    $("#burger-menu").click(function () {
+        $(".menu-item-mobile").slideToggle(300, function () {});
+    });
+
+
+    ////////////////FORM ITEMS///////////////////
+
     $(".exp-bar").click(function () {
         $(this).siblings("div").toggle(300, function () {
         });

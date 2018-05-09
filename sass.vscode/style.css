@@ -11,64 +11,91 @@ body p {
   font-size: 16px;
 }
 
-.header {
-  top: 0;
-  margin-bottom: 20px;
+.menu {
+  width: 100%;
+  height: 80px;
+  background-color: #adca88;
+  margin-bottom: 40px;
 }
 
-.header .menu .menu-item {
-  height: 80px;
-  width: 20%;
-  float: right;
+.menu .menu-item {
   display: flex;
   align-items: center;
   justify-content: center;
+  float: right;
+  height: 80px;
+  width: 20%;
 }
 
-.header .menu .menu-item a {
+.menu .menu-item a {
+  text-decoration: none;
   width: 100%;
-  padding: 30px 0;
+  color: #222;
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  padding: 30px 0;
 }
 
-.header .menu-mobile {
+.menu .menu-item a :hover {
+  cursor: pointer;
+}
+
+.menu .menu-item .selected {
+  text-decoration: underline;
+}
+
+.menu-mobile {
   display: none;
-  background: #000;
   width: 100%;
   height: 80px;
+  background-color: #adca88;
+  margin-bottom: 40px;
 }
 
-.header .menu-desktop {
-  display: block;
-  background: #475832;
-  width: 100%;
+.menu-mobile h2 {
+  top: 25px;
+  right: 30px;
+  position: absolute;
+}
+
+.menu-mobile :first-child {
+  padding-top: 80px;
+}
+
+.menu-mobile .menu-item-mobile {
+  display: none;
   height: 80px;
+  width: 100%;
+  background-color: #adca88;
+  text-align: center;
 }
 
-@media (max-width: 800px) {
-  .header .menu .menu-item {
-    height: 80px;
-    width: 100%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-  }
-  .header .menu .menu-item a {
-    width: 100%;
-    padding: 30px 0;
-    text-align: center;
-  }
-  .header .menu-mobile {
-    display: block;
-  }
-  .header .menu-desktop {
+.menu-mobile .menu-item-mobile a {
+  text-decoration: none;
+  width: 100%;
+  color: #222;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.menu-mobile .menu-item-mobile a :hover {
+  cursor: pointer;
+}
+
+.menu-mobile .menu-item-mobile .selected {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 650px) {
+  .menu {
     display: none;
+  }
+  .menu-mobile {
+    display: block;
   }
 }
 
 .container {
+  position: static;
   display: block;
   margin-bottom: 50px;
 }
@@ -146,11 +173,21 @@ body p {
 .container .container-item .container-form form input[type=submit] {
   padding: 12px 12px;
   border-radius: 4px;
-  background: #475832;
+  background: #adca88;
   color: #fff;
   border: none;
   margin: 10px auto;
   display: block;
   min-width: 80px;
+}
+
+@media only screen and (max-width: 650px) {
+  .container .container-item .container-form {
+    width: 90%;
+  }
+  .container .container-item .container-form form .item input[type=number],
+  .container .container-item .container-form form .item input[type=text] {
+    min-width: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

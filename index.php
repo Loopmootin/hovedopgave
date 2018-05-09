@@ -8,22 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" type="text/css" media="screen" href="sass.vscode/style.css" />
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
 
-    <div class="header">
-        <div class="menu-mobile menu">
-            <div class="menu-item"><a href="#">Home</a></div>
-            <div class="menu-item"><a href="#">Home</a></div>
-        </div>
-        <div class="menu-desktop menu">
-            <div class="menu-item"><a href="#">Home</a></div>
-            <div class="menu-item"><a href="#">Home</a></div>
-        </div>
-    </div>
+    <?php
+        include('php/header.php');
+    ?>
 
     <div class="container">
         <div class="container-item">
