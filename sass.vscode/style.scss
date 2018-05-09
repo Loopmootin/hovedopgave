@@ -47,8 +47,9 @@ $small-size: 420px;
             color: $my-text;
             text-align: center;
             padding: 30px 0;
-            :hover {
+            &:hover {
                 cursor: pointer;
+                text-decoration: underline !important;
             }
         }
         .selected {
@@ -131,7 +132,7 @@ $small-size: 420px;
                     top: 10px;
                     left: 5px;
                 }
-                :hover {
+                &:hover {
                     cursor: pointer;
                 }
             }
@@ -189,6 +190,11 @@ $small-size: 420px;
                         width: 80%;
                         min-width: 200px;
                         display: block;
+                    }
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
                     }
                 }
                 input[type=submit] {

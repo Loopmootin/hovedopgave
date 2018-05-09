@@ -16,8 +16,10 @@
     <body>
 
     <?php
+        require_once('php/db_con.php');
         include('php/header.php');
     ?>
+
 
     <div class="container">
         <div class="container-item">
@@ -28,19 +30,19 @@
                 </div>
                 
                 <div class="create-food">
-                    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+                    <form id="upload-product" action="" method="post">
                         <h3>Opret en fødevarer:</h3><br />
                         <div class="item">
                             <label>Navn</label><br />
-                            <input type="text" required><br />
-                        </div>
-                        <div class="item">
-                            <label>Pris</label><br />
-                            <input type="number" required><br />
+                            <input id="product-name" type="text" name="name" required><br />
                         </div>
                         <div class="item">
                             <label>Vægt i gram</label><br />
-                            <input type="number" required><br />
+                            <input type="number" name="weight" required><br />
+                        </div>
+                        <div class="item">
+                            <label>Pris</label><br />
+                            <input type="number" name="price" required><br />
                         </div>
                         <div class="item-check">
                             <div class="half-block">
@@ -59,7 +61,8 @@
                                 <input id="cb-vegetable" type="checkbox"><br />
                             </div>
                         </div>
-                        <input type="submit" name="Create" value="submit">
+                        <span id="product-message"></span><br />
+                        <input type="submit" name="submit-product" value="Upload">
                     </form>
                 </div>
             </div>
@@ -82,7 +85,7 @@
                             <input type="file" name="file" id="file" required /><br />
                             <span id="file-selected"></span><br />
                             <span id="message"></span><br />
-                            <input type="submit" value="Upload" name="Create" />
+                            <input type="submit" value="Upload" name="create" />
                         </div>
                     </form>
                 </div>
