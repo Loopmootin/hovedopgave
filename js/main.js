@@ -1,6 +1,6 @@
 
 
-$(document).ready(function (e) {
+$(document).ready(function () {
 
     ////////////////MENU///////////////////
 
@@ -55,29 +55,20 @@ $(document).ready(function (e) {
 
     ///////////////////CREATE PRODUCT/////////////////////
 
-    $("#upload-product").on('submit', (function (e) {
-        console.log('Hej');
-        e.preventDefault();
-        $("#product-message").empty();
 
-        var data;
-
-        data = new FormData();
-        data.append('text', $('#product-name')[0].files[0]);
-
-        $.ajax({
-            url: "php/creator.php", // Url to which the request is send
-            type: "POST", // Type of request to be send, called as method
-            data: data, // Data sent to server, a set of key/value pairs (i.e. form fields and values)
-            contentType: false, // The content type used when sending data to the server.
-            cache: false, // To unable request pages to be cached
-            processData: false, // To send DOMDocument or non processed data file it is set to false
-            success: function (data) // A function to be called if request succeeds
-            {
-                $("#product-message").html(data);
-            }
+   $("#upload-product").submit(function(event) {
+        event.preventDefault();
+        var productName = $("#product-name").val();
+        var productWeight = $("#product-weight").val();
+        var productPrice = $("#product-price").val();
+        var productSubmit = $("#product-submit").val();
+        $("#product-message").load("creator.php", {
+            productName: productName,
+            productWeight: productWeight,
+            productPrice: productPrice,
+            productSubmit: productSubmit
         });
-    }));
+    });
 
 
     ///////////////////UPLOAD IMAGE/////////////////////
@@ -88,7 +79,7 @@ $(document).ready(function (e) {
         $('#file-selected').html(fileName);
     });
 
-    $("#uploadimage").on('submit', (function () {
+    $("#uploadimage").submit(function(e) {
         e.preventDefault();
         $("#message").empty();
         $.ajax({
@@ -103,6 +94,6 @@ $(document).ready(function (e) {
                 $("#message").html(data);
             }
         });
-    }));
+    });
 
 });

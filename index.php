@@ -25,12 +25,12 @@
         <div class="container-item">
             <div class="container-form">
                 <div class="exp-bar">
-                    <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
+                    <img class="plus-icon" src="img/plus-icon-2.png" alt="plus icon">
                     <h2>Opret en fødevarer</h2>
                 </div>
                 
                 <div class="create-food">
-                    <form id="upload-product" action="" method="post">
+                    <form id="upload-product" action="creator.php" method="post">
                         <h3>Opret en fødevarer:</h3><br />
                         <div class="item">
                             <label>Navn</label><br />
@@ -38,11 +38,11 @@
                         </div>
                         <div class="item">
                             <label>Vægt i gram</label><br />
-                            <input type="number" name="weight" required><br />
+                            <input id="product-weight" type="number" name="weight" required><br />
                         </div>
                         <div class="item">
                             <label>Pris</label><br />
-                            <input type="number" name="price" required><br />
+                            <input id="product-price" type="number" name="price" required><br />
                         </div>
                         <div class="item-check">
                             <div class="half-block">
@@ -61,8 +61,8 @@
                                 <input id="cb-vegetable" type="checkbox"><br />
                             </div>
                         </div>
+                        <input id="product-submit" type="submit" name="submit-product" value="Upload">
                         <span id="product-message"></span><br />
-                        <input type="submit" name="submit-product" value="Upload">
                     </form>
                 </div>
             </div>
@@ -71,7 +71,7 @@
         <div class="container-item">
             <div class="container-form">
                 <div class="exp-bar">
-                    <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
+                    <img class="plus-icon" src="img/plus-icon-2.png" alt="plus icon">
                     <h2>Lav en ret</h2>
                 </div>
                 <div class="create-dish">
@@ -95,7 +95,7 @@
         <div class="container-item">
             <div class="container-form">
                 <div class="exp-bar">
-                    <img class="plus-icon" src="img/plus-icon.png" alt="plus icon">
+                    <img class="plus-icon" src="img/plus-icon-2.png" alt="plus icon">
                     <h2>Lav en Madplan</h2>
                 </div>
                 <div class="create-foodplan">

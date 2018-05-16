@@ -179,6 +179,7 @@ body p {
   margin: 10px auto;
   display: block;
   min-width: 80px;
+  width: 80%;
   pointer-events: auto;
   position: static;
   text-align: center;
