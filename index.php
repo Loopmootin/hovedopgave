@@ -30,7 +30,7 @@
                 </div>
                 
                 <div class="create-food">
-                    <form id="upload-product" action="php/creator.php" method="post">
+                    <form id="upload-product" action="" method="post">
                         <h3>Opret en fødevarer:</h3><br />
                         <div class="item">
                             <label>Navn</label><br />

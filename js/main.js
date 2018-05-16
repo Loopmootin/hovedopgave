@@ -62,13 +62,21 @@ $(document).ready(function () {
         var productWeight = $("#product-weight").val();
         var productPrice = $("#product-price").val();
         var productSubmit = $("#product-submit").val();
-        $(".product-message").load("php/creator.php", {
-            productName: productName,
-            productWeight: productWeight,
-            productPrice: productPrice,
-            productSubmit: productSubmit
+        $.post('php/creator.php', {
+                    productName: productName,
+                    productWeight: productWeight,
+                    productPrice: productPrice,
+                    productSubmit: productSubmit
+                }, function (response) {
+            if (response == 'success') {
+                console.log('data sent to php');
+            }
+        }, 'json').fail(function (response) {
+            console.log('no response');
         });
     });
+
+    
 
 
     ///////////////////UPLOAD IMAGE/////////////////////
