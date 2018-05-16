@@ -116,11 +116,11 @@ $small-size: 420px;
         .container-form {
             width: 60%;
             margin: 0 auto;
-            border: 1px solid #eee;
+            outline: 1px solid #eee;
             position: relative;
             z-index: 1;
             .exp-bar {
-                border-bottom: 1px solid #eee;
+                outline: 1px solid #eee;
                 padding-left: 40px;
                 h2 {
                     text-align: center;

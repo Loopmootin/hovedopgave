@@ -11,7 +11,7 @@
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
+
     </head>
     <body>
 
@@ -30,39 +30,22 @@
                 </div>
                 
                 <div class="create-food">
-                    <form id="upload-product" action="creator.php" method="post">
+                    <form id="upload-product" action="php/creator.php" method="post">
                         <h3>Opret en fødevarer:</h3><br />
                         <div class="item">
                             <label>Navn</label><br />
-                            <input id="product-name" type="text" name="name" required><br />
+                            <input id="product-name" type="text" name="product-name" required><br />
                         </div>
                         <div class="item">
                             <label>Vægt i gram</label><br />
-                            <input id="product-weight" type="number" name="weight" required><br />
+                            <input id="product-weight" type="number" name="product-weight" required><br />
                         </div>
                         <div class="item">
                             <label>Pris</label><br />
-                            <input id="product-price" type="number" name="price" required><br />
+                            <input id="product-price" type="number" name="product-price" required><br />
                         </div>
-                        <div class="item-check">
-                            <div class="half-block">
-                                <label for="cb-diary">Diary</label><br />
-                                <input id="cb-diary" type="checkbox"><br />
-
-                                <label for="cb-gluten">Gluten</label><br />
-                                <input id="cb-gluten" type="checkbox"><br />
-                            </div>
-                            
-                            <div class="half-block">
-                                <label for="cb-fruit">Fruit</label><br />
-                                <input id="cb-fruit" type="checkbox"><br />
-
-                                <label for="cb-vegetable">Vegetable</label><br />
-                                <input id="cb-vegetable" type="checkbox"><br />
-                            </div>
-                        </div>
-                        <input id="product-submit" type="submit" name="submit-product" value="Upload">
-                        <span id="product-message"></span><br />
+                        <input id="product-submit" type="submit" name="product-submit" value="Upload">
+                        <p class="product-message"></p><br />
                     </form>
                 </div>
             </div>
@@ -115,5 +98,27 @@
     <?php
         //include('php/footer.php');
     ?> 
+    <script src="js/main.js"></script>
     </body>
 </html>
+
+
+<!-- 
+    <div class="item-check">
+        <div class="half-block">
+            <label for="cb-diary">Diary</label><br />
+            <input id="cb-diary" type="checkbox"><br />
+
+            <label for="cb-gluten">Gluten</label><br />
+            <input id="cb-gluten" type="checkbox"><br />
+        </div>
+        
+        <div class="half-block">
+            <label for="cb-fruit">Fruit</label><br />
+            <input id="cb-fruit" type="checkbox"><br />
+
+            <label for="cb-vegetable">Vegetable</label><br />
+            <input id="cb-vegetable" type="checkbox"><br />
+        </div>
+    </div>
+-->

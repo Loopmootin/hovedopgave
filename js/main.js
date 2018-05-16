@@ -56,13 +56,13 @@ $(document).ready(function () {
     ///////////////////CREATE PRODUCT/////////////////////
 
 
-   $("#upload-product").submit(function(event) {
+    $("#upload-product").submit(function(event) {
         event.preventDefault();
         var productName = $("#product-name").val();
         var productWeight = $("#product-weight").val();
         var productPrice = $("#product-price").val();
         var productSubmit = $("#product-submit").val();
-        $("#product-message").load("creator.php", {
+        $(".product-message").load("php/creator.php", {
             productName: productName,
             productWeight: productWeight,
             productPrice: productPrice,
@@ -79,7 +79,7 @@ $(document).ready(function () {
         $('#file-selected').html(fileName);
     });
 
-    $("#uploadimage").submit(function(e) {
+    $("#uploadimage").submit(function() {
         e.preventDefault();
         $("#message").empty();
         $.ajax({

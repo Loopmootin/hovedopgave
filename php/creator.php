@@ -1,22 +1,15 @@
 <?php 
 
     ////////////////////// SUBMIT PRODUCT ////////////////////////
-    if(isset($_POST['submit'])) {
+    if(isset($_POST['productSubmit'])) {
         
-        echo 'HEJHEJHEJ';
-
-        $name = filter_input(INPUT_POST, 'name')
-                    or die('Missing/illegal username parameter');
-                    
-        $weight = filter_input(INPUT_POST, 'weight')
-                    or die('Missing/illegal username parameter');
-                    
-        $price = filter_input(INPUT_POST, 'price')
-					or die('Missing/illegal username parameter');
+        $productName = $_POST['productName'];
+        $productWeight = $_POST['productName'];
+        $productPrice = $_POST['productName'];
 
         $sql = 'INSERT INTO product(name, weight, price) VALUES(?, ?, ?)';
             $stmt = $con->prepare($sql);
-            $stmt->bind_param('sii', $name, $weight, $price);
+            $stmt->bind_param('sii', $productName, $productWeight, $productPrice);
             $stmt->execute();
             if ($stmt->affected_rows > 0){
                 echo 'Filedata added to the database :-)';
@@ -24,7 +17,5 @@
                 echo 'Could not add the file to the database';
             }
     }
-
-
 
 ?>

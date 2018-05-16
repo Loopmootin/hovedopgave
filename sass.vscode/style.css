@@ -110,13 +110,13 @@ body p {
 .container .container-item .container-form {
   width: 60%;
   margin: 0 auto;
-  border: 1px solid #eee;
+  outline: 1px solid #eee;
   position: relative;
   z-index: 1;
 }
 
 .container .container-item .container-form .exp-bar {
-  border-bottom: 1px solid #eee;
+  outline: 1px solid #eee;
   padding-left: 40px;
 }
 
