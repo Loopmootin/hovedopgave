@@ -68,8 +68,8 @@
                             <input type="file" name="file" id="file" required /><br />
                             <span id="file-selected"></span><br />
                             <span id="message"></span><br />
-                            <input type="submit" value="Upload" name="create" />
                         </div>
+                        <input type="submit" value="Upload" name="create" />
                     </form>
                 </div>
             </div>

@@ -62,6 +62,8 @@ $(document).ready(function () {
         var productWeight = $("#product-weight").val();
         var productPrice = $("#product-price").val();
         var productSubmit = $("#product-submit").val();
+        console.log(productPrice, productWeight);
+
         $.post('php/creator.php', {
                     productName: productName,
                     productWeight: productWeight,
@@ -69,11 +71,14 @@ $(document).ready(function () {
                     productSubmit: productSubmit
                 }, function (response) {
             if (response == 'success') {
-                console.log('data sent to php');
             }
         }, 'json').fail(function (response) {
             console.log('no response');
         });
+
+        $("#product-name").val("");
+        $("#product-weight").val("");
+        $("#product-price").val("");
     });
 
     
@@ -87,7 +92,7 @@ $(document).ready(function () {
         $('#file-selected').html(fileName);
     });
 
-    $("#uploadimage").submit(function() {
+    $("#uploadimage").submit(function(e) {
         e.preventDefault();
         $("#message").empty();
         $.ajax({

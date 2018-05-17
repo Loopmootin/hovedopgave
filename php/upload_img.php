@@ -26,17 +26,17 @@
             move_uploaded_file($sourcePath,$targetPath) ; // Moving Uploaded file
             echo "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
 
-            /*require_once('db_con.php');
+            require_once('../php/db_con.php');
             
-            $sql = 'INSERT INTO image(id, url) VALUES (?,?)';
+            $sql = 'INSERT INTO dish(name, img_url) VALUES(?, ?)';
             $stmt = $con->prepare($sql);
-            $stmt->bind_param('is', $id, $target_file);
+            $stmt->bind_param('ss', $name, $target_file);
             $stmt->execute();
             if ($stmt->affected_rows > 0){
                 echo 'Filedata added to the database :-)';
             } else {
                 echo 'Could not add the file to the database';
-            }*/
+            }
 
         }}} else {
 
