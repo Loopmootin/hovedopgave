@@ -51,6 +51,7 @@ $small-size: 420px;
 
 .container {
     margin-top: 20px;
+    max-width: 1300px;
     .intro {
         margin: 20px 0;
         text-align: center;
@@ -66,6 +67,7 @@ $small-size: 420px;
             .crate-text {
                 display: inline-block;
                 margin: 10px 0;
+                padding: 40px 20px;
                 flex-grow: 1;
                 width: calc(100% * (1/2));
                 background-color: $my-beige;

@@ -71,7 +71,9 @@
     <div class="food-crates">
         <div class="crate-item">
             <div class="crate-text">
-                <h3>Tilbud nummer 1</h3>
+                <h3>Den Populære</h3>
+                <p>Køb bananer!</p>
+                <p>Køb bananer!</p>
                 <p>Køb bananer!</p>
             </div>
             <div class="crate-img"> 
@@ -81,7 +83,9 @@
             <div class="crate-img"> 
             </div>
             <div class="crate-text">
-                <h3>Tilbud nummer 1</h3>
+                <h3>Den Børnevenlige</h3>
+                <p>Køb bananer!</p>
+                <p>Køb bananer og MANGO!</p>
                 <p>Køb bananer!</p>
             </div>
         </div>
