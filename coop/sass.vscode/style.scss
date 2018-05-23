@@ -1,0 +1,107 @@
+
+//////////////////// HARD RESET ////////////////////
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//////////////////// GLOBAL STYLE ////////////////////
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    p {
+        font-size: 16px;
+    }
+}
+
+$my-white: #FDFFFC;
+$my-gray: #0D1B1E;
+$my-red: #B50A11;
+$my-beige: #E2DBBE;
+$my-blue: #A9DDD6;
+
+$large-size: 1200px;
+$medium-size: 800px;
+$small-size: 420px;
+
+
+///////////////////////// MENU /////////////////////////
+
+.navbar {
+    background-color: $my-beige;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .navbar-nav {
+        position: absolute;
+        right: 10px;
+        @media only screen and (max-width: 992px) {
+            position: relative;
+            a {
+                text-align: center;
+            }
+        }
+    }
+}
+
+///////////////////////// HOME /////////////////////////
+
+
+.container {
+    margin-top: 20px;
+    .intro {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .food-crates {
+        .crate-item {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 400px;
+            margin-bottom: 10px;
+            .crate-text {
+                display: inline-block;
+                margin: 10px 0;
+                flex-grow: 1;
+                width: calc(100% * (1/2));
+                background-color: $my-beige;
+                height: 400px;
+                h3, p {
+                    text-align: center;
+                }
+            }
+            .crate-img {
+                display: inline-block;
+                margin:10px 0;
+                flex-grow: 1;
+                width: calc(100% * (1/2));
+                background-image: url("../img/food-wide.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+                height: 400px;
+            }
+            @media only screen and (max-width: 992px) {
+                display: block;
+                position: relative;
+                margin-bottom: 10px;
+                height: 100%;
+                .crate-text {
+                    width: 100%;
+                    display: block;
+                    position: relative;
+                }
+                .crate-img {
+                    width: 100%;
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+

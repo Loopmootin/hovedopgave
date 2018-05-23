@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+body p {
+  font-size: 16px;
+}
+
+.navbar {
+  background-color: #E2DBBE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar .navbar-nav {
+  position: absolute;
+  right: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar .navbar-nav {
+    position: relative;
+  }
+  .navbar .navbar-nav a {
+    text-align: center;
+  }
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.container .intro {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container .food-crates .crate-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.container .food-crates .crate-item .crate-text {
+  display: inline-block;
+  margin: 10px 0;
+  flex-grow: 1;
+  width: calc(100% * (1/2));
+  background-color: #E2DBBE;
+  height: 400px;
+}
+
+.container .food-crates .crate-item .crate-text h3, .container .food-crates .crate-item .crate-text p {
+  text-align: center;
+}
+
+.container .food-crates .crate-item .crate-img {
+  display: inline-block;
+  margin: 10px 0;
+  flex-grow: 1;
+  width: calc(100% * (1/2));
+  background-image: url("../img/food-wide.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 400px;
+}
+
+@media only screen and (max-width: 992px) {
+  .container .food-crates .crate-item {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    height: 100%;
+  }
+  .container .food-crates .crate-item .crate-text {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  .container .food-crates .crate-item .crate-img {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+}
+/*# sourceMappingURL=style.css.map */
