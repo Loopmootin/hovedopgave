@@ -10,10 +10,10 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-				<a class="nav-item nav-link <?= ($fn=='index.php')?'active':''?>" href="#">Hjem</a>
-				<a class="nav-item nav-link <?= ($fn=='video.php')?'active':''?>" href="#">Video Guide</a>
-				<a class="nav-item nav-link <?= ($fn=='discount.php')?'active':''?>" href="#">Tilbud</a>
-				<a class="nav-item nav-link <?= ($fn=='login.php')?'active':''?>" href="#">Login</a>
+				<a class="nav-item nav-link <?= ($fn=='index.php')?'active':''?>" href="index.php">Hjem</a>
+				<a class="nav-item nav-link <?= ($fn=='guide.php')?'active':''?>" href="guide.php">Video Guide</a>
+				<a class="nav-item nav-link <?= ($fn=='discount.php')?'active':''?>" href="discount.php">Tilbud</a>
+				<a class="nav-item nav-link <?= ($fn=='login.php')?'active':''?>" href="#" data-toggle="modal" data-target="#login-modal">Login</a>
 				</div>
 			</div>
 		</nav>

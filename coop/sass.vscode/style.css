@@ -15,8 +15,8 @@ body p {
 
 .navbar {
   background-color: #E2DBBE;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .navbar .navbar-nav {
@@ -38,6 +38,11 @@ body p {
   max-width: 1300px;
 }
 
+.container .jumbotron {
+  background-color: #0D1B1E;
+  color: white;
+}
+
 .container .intro {
   margin: 20px 0;
   text-align: center;
@@ -54,10 +59,10 @@ body p {
 
 .container .food-crates .crate-item .crate-text {
   display: inline-block;
-  margin: 10px 0;
+  margin: 10px 5px;
   padding: 40px 20px;
   flex-grow: 1;
-  width: calc(100% * (1/2));
+  width: calc(100% * (1/2) - 10px);
   background-color: #E2DBBE;
   height: 400px;
 }
@@ -68,9 +73,9 @@ body p {
 
 .container .food-crates .crate-item .crate-img {
   display: inline-block;
-  margin: 10px 0;
+  margin: 10px 5px;
   flex-grow: 1;
-  width: calc(100% * (1/2));
+  width: calc(100% * (1/2) - 10px);
   background-image: url("../img/food-wide.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -94,6 +99,37 @@ body p {
     width: 100%;
     display: block;
     position: relative;
+  }
+}
+
+.container .video-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .video-tiles .video-item {
+  width: calc(50% - 20px);
+  padding: 20px;
+  margin: 10px;
+}
+
+.container .video-tiles .video-item h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container .video-tiles .video-item iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  min-height: 315px;
+}
+
+@media only screen and (max-width: 992px) {
+  .container .video-tiles .video-item {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

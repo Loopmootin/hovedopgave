@@ -32,8 +32,8 @@ $small-size: 420px;
 
 .navbar {
     background-color: $my-beige;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     .navbar-nav {
         position: absolute;
         right: 10px;
@@ -46,12 +46,16 @@ $small-size: 420px;
     }
 }
 
-///////////////////////// HOME /////////////////////////
+///////////////////////// HOME & CONTAINER /////////////////////////
 
 
 .container {
     margin-top: 20px;
     max-width: 1300px;
+    .jumbotron {
+        background-color: $my-gray;
+        color: white;
+    }
     .intro {
         margin: 20px 0;
         text-align: center;
@@ -66,10 +70,10 @@ $small-size: 420px;
             margin-bottom: 10px;
             .crate-text {
                 display: inline-block;
-                margin: 10px 0;
+                margin: 10px 5px;
                 padding: 40px 20px;
                 flex-grow: 1;
-                width: calc(100% * (1/2));
+                width: calc(100% * (1/2) - 10px);
                 background-color: $my-beige;
                 height: 400px;
                 h3, p {
@@ -78,9 +82,9 @@ $small-size: 420px;
             }
             .crate-img {
                 display: inline-block;
-                margin:10px 0;
+                margin:10px 5px;
                 flex-grow: 1;
-                width: calc(100% * (1/2));
+                width: calc(100% * (1/2) - 10px);
                 background-image: url("../img/food-wide.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
@@ -107,3 +111,37 @@ $small-size: 420px;
     }
 }
 
+
+
+///////////////////////// GUIDES /////////////////////////
+
+.container {
+    .video-tiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .video-item {
+            width: calc(50% - 20px);
+            padding: 20px;
+            margin: 10px;
+            h4 {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            iframe {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+                min-height: 315px;
+            }
+        }
+    }
+    @media only screen and (max-width: 992px) {
+        .video-tiles {
+            .video-item {
+                width: 100%;
+            }
+        }
+    }
+}
