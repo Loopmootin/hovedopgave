@@ -11,7 +11,6 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     min-height: 100vh;
-    padding-bottom: 40px;
     p {
         font-size: 16px;
     }
@@ -19,7 +18,7 @@ body {
 
 $my-white: #FDFFFC;
 $my-gray: #0D1B1E;
-$my-red: #B50A11;
+$my-red: #D30019;
 $my-beige: #E2DBBE;
 $my-blue: #A9DDD6;
 
@@ -32,16 +31,19 @@ $small-size: 420px;
 
 .navbar {
     background-color: $my-beige;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 10px 5%;
     .navbar-nav {
-        position: absolute;
-        right: 10px;
+        margin-left: auto;
         @media only screen and (max-width: 992px) {
             position: relative;
             a {
                 text-align: center;
             }
+        }
+    }
+    .navbar-brand {
+        .coop-logo {
+            width: 160px;
         }
     }
 }
@@ -51,10 +53,11 @@ $small-size: 420px;
 
 .container {
     margin-top: 20px;
-    max-width: 1300px;
+    max-width: 1400px;
     .jumbotron {
         background-color: $my-gray;
         color: white;
+        border-radius: 0;
     }
     .intro {
         margin: 20px 0;
@@ -66,30 +69,43 @@ $small-size: 420px;
             display: flex;
             flex-direction: row;
             align-items: center;
-            height: 400px;
+            height: 450px;
             margin-bottom: 10px;
             .crate-text {
                 display: inline-block;
-                margin: 10px 5px;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 padding: 40px 20px;
                 flex-grow: 1;
                 width: calc(100% * (1/2) - 10px);
                 background-color: $my-beige;
-                height: 400px;
-                h3, p {
+                height: 450px;
+                h3, h4, p {
                     text-align: center;
+                }
+                h4 {
+                    margin-bottom: 15px;
                 }
             }
             .crate-img {
                 display: inline-block;
-                margin:10px 5px;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 flex-grow: 1;
                 width: calc(100% * (1/2) - 10px);
-                background-image: url("../img/food-wide.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: auto 100%;
-                height: 400px;
+                height: 450px;
+                overflow: hidden;
+                img {
+                    height: 100%;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .left {
+                margin-right: 5px;
+            }
+            .right {
+                margin-left: 5px;
             }
             @media only screen and (max-width: 992px) {
                 display: block;
@@ -105,6 +121,12 @@ $small-size: 420px;
                     width: 100%;
                     display: block;
                     position: relative;
+                }
+                .left {
+                    margin-right: 0;
+                }
+                .right {
+                    margin-left: 0;
                 }
             }
         }
@@ -143,5 +165,29 @@ $small-size: 420px;
                 width: 100%;
             }
         }
+    }
+}
+
+
+
+
+//////////////////////// FOOTER //////////////////////
+
+.footer {
+    background-color: $my-beige;
+    margin: 40px 0 0 0;
+    .social {
+        margin: 15px 30px 0px auto;
+        width: 400px;
+        padding-bottom: 15px;
+        img {
+            width: 40px;
+        }
+    }
+    .map {
+        width: 400px;
+        height: 200px;
+        margin: 15px 30px 15px auto;
+        padding-bottom: 15px;
     }
 }
