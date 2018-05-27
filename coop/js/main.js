@@ -2,14 +2,16 @@
 
 $(document).ready(function () {
 
+    $(".crate-img").outerHeight($(".crate-text").outerHeight());
+
 });
 
 function initMap() {
 
-    var warehouse = { lat: -3.060109, lng: -60.055145 };
+    var warehouse = { lat: 55.661315, lng: 12.360166 };
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 6,
+        zoom: 14,
         center: warehouse
     });
 
