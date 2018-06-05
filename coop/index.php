@@ -18,6 +18,7 @@
     <body>
 
     <?php
+        include('disclaimer-modal.php');
         require_once('php/db_con.php');
         include('php/header.php');
         include('login-modal.php');

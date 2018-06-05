@@ -1,4 +1,8 @@
 
+$(window).on('load', function () {
+    $('#disclaimer-modal').modal('show');
+});
+
 
 $(document).ready(function () {
 
