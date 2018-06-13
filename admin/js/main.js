@@ -73,7 +73,7 @@ $(document).ready(function () {
             if (response == 'success') {
             }
         }, 'json').fail(function (response) {
-            console.log('no response');
+            console.log('no response food item');
         });
 
         $("#product-name").val("");
@@ -81,9 +81,8 @@ $(document).ready(function () {
         $("#product-price").val("");
     });
 
+
     
-
-
     ///////////////////UPLOAD IMAGE/////////////////////
 
     $('#file').on('change', function () {
@@ -92,13 +91,19 @@ $(document).ready(function () {
         $('#file-selected').html(fileName);
     });
 
-    $("#uploadimage").submit(function(e) {
+    $("#upload-dish").submit(function (e) {
         e.preventDefault();
         $("#message").empty();
+        var dishName = $("#dish-name").val();
+        var dishSubmit = $("#dish-submit").val();
+
+        var formData = new FormData($(this)[0]);
+        formData.append('dishName', dishName);
+
         $.ajax({
             url: "php/upload_img.php", // Url to which the request is send
             type: "POST", // Type of request to be send, called as method
-            data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+            data: formData,
             contentType: false, // The content type used when sending data to the server.
             cache: false, // To unable request pages to be cached
             processData: false, // To send DOMDocument or non processed data file it is set to false
@@ -107,6 +112,6 @@ $(document).ready(function () {
                 $("#message").html(data);
             }
         });
-    });
 
+    });
 });

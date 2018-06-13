@@ -4,12 +4,15 @@ require_once('../php/db_con.php');
 
     if(isset($_FILES["file"]["type"])) {
 
+        $name = filter_input(INPUT_POST, 'dishName')
+    or die('Missing/illegal title parameter!!!');
+
         $validextensions = array("jpeg", "jpg", "png");
         $temporary = explode(".", $_FILES["file"]["name"]);
         $file_extension = end($temporary);
         $target_dir = "../img/";
         $target_file = $target_dir . basename($_FILES["file"]["name"]);
-        $name = 
+
         
         if ((($_FILES["file"]["type"] == "image/png") || ($_FILES["file"]["type"] == "image/jpg") || ($_FILES["file"]["type"] == "image/jpeg")
         ) && ($_FILES["file"]["size"] < 10000000)//Approx. 10mb files can be uploaded.

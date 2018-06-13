@@ -61,7 +61,7 @@
                     <h2>Lav en ret</h2>
                 </div>
                 <div class="create-dish">
-                    <form id="uploadimage" class="uploadimage" action="" method="post" enctype="multipart/form-data">
+                    <form id="upload-dish" class="upload-dish" action="" method="post" enctype="multipart/form-data">
                         <div class="item">
                             <label>Rettens navn</label><br />
                             <input id="dish-name" type="text" required><br />
@@ -72,7 +72,7 @@
                             <span id="file-selected"></span><br />
                             <span id="message"></span><br />
                         </div>
-                        <input type="submit" value="Upload" name="create" />
+                        <input id="dish-submit" type="submit" value="Upload" name="create" />
                     </form>
                 </div>
             </div>
