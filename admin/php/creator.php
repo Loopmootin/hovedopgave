@@ -10,12 +10,12 @@
     if(isset($_POST['productSubmit'])) {
         
         $productName = $_POST['productName'];
-        $productWeight = $_POST['productWeight'];
         $productPrice = $_POST['productPrice'];
+        $productWeight = $_POST['productWeight'];
 
-            $sql = 'INSERT INTO product(name, weight, price) VALUES(?, ?, ?)';
+            $sql = 'INSERT INTO food_item(name, price, weight) VALUES(?, ?, ?)';
             $stmt = $con->prepare($sql);
-            $stmt->bind_param('sii', $productName, $productWeight, $productPrice);
+            $stmt->bind_param('sii', $productName, $productPrice, $productWeight);
             $stmt->execute();
             if ($stmt->affected_rows > 0){
                 echo 'success';

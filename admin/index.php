@@ -7,10 +7,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" media="screen" href="sass.vscode/style.css" />
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        
 
     </head>
     <body>
@@ -37,12 +40,12 @@
                             <input id="product-name" type="text" name="product-name" required><br />
                         </div>
                         <div class="item">
-                            <label>Vægt i gram</label><br />
-                            <input id="product-weight" type="number" name="product-weight" required><br />
-                        </div>
-                        <div class="item">
                             <label>Pris</label><br />
                             <input id="product-price" type="number" name="product-price" required><br />
+                        </div>
+                        <div class="item">
+                            <label>Vægt i gram</label><br />
+                            <input id="product-weight" type="number" name="product-weight" required><br />
                         </div>
                         <input id="product-submit" type="submit" name="product-submit" value="Upload">
                         <p class="product-message"></p><br />
@@ -61,7 +64,7 @@
                     <form id="uploadimage" class="uploadimage" action="" method="post" enctype="multipart/form-data">
                         <div class="item">
                             <label>Rettens navn</label><br />
-                            <input type="text" required><br />
+                            <input id="dish-name" type="text" required><br />
                         </div>
                         <div class="item">
                             <label for="file" class="custom-file">Upload Billede</label><br />

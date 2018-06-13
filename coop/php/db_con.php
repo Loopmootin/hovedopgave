@@ -6,7 +6,7 @@
 const HOSTNAME = 'localhost'; //server
 const MYSQLUSER = 'root'; //superbruger
 const MYSQLPASS = 'root'; //password
-const MYSQLDB = 'coop'; //database navn
+const MYSQLDB = 'foodplan'; //database navn
 
 //2. forbindelsen via mysqli metoden
 $con = new mysqli(HOSTNAME, MYSQLUSER, MYSQLPASS, MYSQLDB);
