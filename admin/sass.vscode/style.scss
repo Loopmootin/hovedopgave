@@ -155,7 +155,7 @@ $small-size: 420px;
             }
             form {
                 width: calc(100% - 120px);
-                margin: 0 auto;
+                margin: -7px auto 0 auto;
                 padding: 20px;
                 border-left: 1px solid #eee;
                 border-right: 1px solid #eee;
@@ -164,8 +164,8 @@ $small-size: 420px;
                     label {
                         color: $my-text;
                         position: absolute;
-                        top: 39px;
-                        left: 10%;
+                        top: 45px;
+                        left: 12.5%;
                         pointer-events:none;
                     }
                     .custom-file {

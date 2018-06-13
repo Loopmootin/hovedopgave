@@ -152,7 +152,7 @@ body p {
 
 .container .container-item .container-form form {
   width: calc(100% - 120px);
-  margin: 0 auto;
+  margin: -7px auto 0 auto;
   padding: 20px;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
@@ -165,8 +165,8 @@ body p {
 .container .container-item .container-form form .item label {
   color: #222;
   position: absolute;
-  top: 39px;
-  left: 10%;
+  top: 45px;
+  left: 12.5%;
   pointer-events: none;
 }
 

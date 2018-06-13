@@ -19,7 +19,7 @@ $(document).ready(function () {
     $("input[type=text]").focus(function () {
         $(this).siblings("label").css({
             fontSize: 10,
-            top: 30,
+            top: 35,
             transition: "0.5s"
         });
     });
@@ -28,7 +28,7 @@ $(document).ready(function () {
         if (!this.value) {
             $(this).siblings("label").css({
                 fontSize: 16,
-                top: 39,
+                top: 45,
                 transition: "0.5s"
             });
         }
@@ -37,7 +37,7 @@ $(document).ready(function () {
     $("input[type=number]").focus(function () {
         $(this).siblings("label").css({
             fontSize: 10,
-            top: 30,
+            top: 35,
             transition: "0.5s"
         });
     });
@@ -46,7 +46,7 @@ $(document).ready(function () {
         if (!this.value) {
             $(this).siblings("label").css({
                 fontSize: 16,
-                top: 39,
+                top: 45,
                 transition: "0.5s"
             });
         }
@@ -83,7 +83,7 @@ $(document).ready(function () {
 
 
     
-    ///////////////////UPLOAD IMAGE/////////////////////
+    ///////////////////CREATE DISH/////////////////////
 
     $('#file').on('change', function () {
         var fileName = '';
@@ -113,5 +113,17 @@ $(document).ready(function () {
             }
         });
 
+    });
+
+
+
+
+///////////////////SEARCH DISHES/////////////////////
+
+    $("#search-food").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#food-table tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
 });

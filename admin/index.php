@@ -88,8 +88,15 @@
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                         <label>Vælg retter:</label><br />
                         <div class="item">
-                            <label>Navn</label><br />
-                            <input type="text" required><br />
+                            <label>Søg ret..</label><br />
+                            <input id="search-food" type="text">
+                            <table>
+                                <tbody id="food-table">
+                                    <?php
+                                        include('php/create_foodplan.php');
+                                    ?> 
+                                </tbody>
+                            </table>
                         </div>
                         <input type="submit" name="Create" value="submit">
                     </form>
