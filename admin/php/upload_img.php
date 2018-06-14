@@ -13,8 +13,12 @@ require_once('../php/db_con.php');
 
         $foodItems = filter_input(INPUT_POST, 'foodItems')
             or die('Missing/illegal food parameter!!!');
-        
+
         echo $foodItems;
+
+        $foodArray = array($foodItems);
+
+        echo json_encode($foodArray);
 
         $validextensions = array("jpeg", "jpg", "png", "JPEG", "JPG", "PNG");
         $temporary = explode(".", $_FILES["file"]["name"]);
@@ -56,10 +60,10 @@ require_once('../php/db_con.php');
 
             echo $latest_id;
 
-            foreach ($foodItems as $value) {
+            foreach ($foodArray as $arrayItem) {
                 $sql = 'INSERT INTO food_item_has_dish(food_item_food_id, dish_dish_id) VALUES(?, ?)';
                 $stmt = $con->prepare($sql);
-                $stmt->bind_param('ii', $value, $latest_id);
+                $stmt->bind_param('ii', $arrayItem, $latest_id);
                 $stmt->execute();
                 if ($stmt->affected_rows > 0){
                     echo 'Food items added to the dish :-)';
