@@ -95,10 +95,17 @@ $(document).ready(function () {
         e.preventDefault();
         $("#message").empty();
         var dishName = $("#dish-name").val();
+        
+        var foodItems = [];
+        $(".food-item-checkbox:checked").each(function () {
+            foodItems.push($(this).val());
+        });
+
         var dishSubmit = $("#dish-submit").val();
 
         var formData = new FormData($(this)[0]);
         formData.append('dishName', dishName);
+        formData.append('foodItems', foodItems);
 
         $.ajax({
             url: "php/upload_img.php", // Url to which the request is send
@@ -112,7 +119,18 @@ $(document).ready(function () {
                 $("#message").html(data);
             }
         });
+        console.log(foodItems);
+    });
 
+
+
+ ///////////////////SEARCH FOOD ITEMS/////////////////////
+
+    $("#search-food-items").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#food-item-table tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     });
 
 

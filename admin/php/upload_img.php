@@ -5,7 +5,10 @@ require_once('../php/db_con.php');
     if(isset($_FILES["file"]["type"])) {
 
         $name = filter_input(INPUT_POST, 'dishName')
-    or die('Missing/illegal title parameter!!!');
+            or die('Missing/illegal title parameter!!!');
+
+        $foodItem = filter_input_array(INPUT_POST, 'foodItem')
+            or die('Missing/illegal title parameter!!!');
 
         $validextensions = array("jpeg", "jpg", "png");
         $temporary = explode(".", $_FILES["file"]["name"]);
@@ -33,15 +36,28 @@ require_once('../php/db_con.php');
             move_uploaded_file($sourcePath,$targetPath) ; // Moving Uploaded file
             echo "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
             
-            $sql = 'INSERT INTO dish(name, image) VALUES(?, ?);';
+            $sql = 'INSERT INTO dish(name, image) VALUES(?, ?)';
             $stmt = $con->prepare($sql);
             $stmt->bind_param('ss', $name, $target_file);
             $stmt->execute();
             if ($stmt->affected_rows > 0){
                 echo 'Filedata added to the database :-)';
             } else {
-                echo 'Could not add the file to the database';
+                echo 'Could not add the file to the database ';
                 echo $name;
+            }
+
+            foreach ($foodItem as $value) {
+                $sql = 'INSERT INTO food_item_has_dish(food_item_food_id, dish_dish_id) VALUES(?, ?)';
+                $stmt = $con->prepare($sql);
+                $stmt->bind_param('ii', $foodItem, $did);
+                $stmt->execute();
+                if ($stmt->affected_rows > 0){
+                    echo 'Filedata added to the database :-)';
+                } else {
+                    echo 'Could not add the file to the database ';
+                    echo $name;
+                }
             }
 
         }}} else {

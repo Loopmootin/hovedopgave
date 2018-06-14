@@ -66,6 +66,18 @@
                             <label>Rettens navn</label><br />
                             <input id="dish-name" type="text" required><br />
                         </div>
+                        <label>Vælg produkter:</label><br />
+                        <div class="item">
+                            <label>Søg produkter..</label><br />
+                            <input id="search-food-items" type="text">
+                            <table>
+                                <tbody id="food-item-table">
+                                    <?php
+                                        include('php/show_food_items.php');
+                                    ?> 
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="item">
                             <label for="file" class="custom-file">Upload Billede</label><br />
                             <input type="file" name="file" id="file" required /><br />
@@ -86,6 +98,11 @@
                 </div>
                 <div class="create-foodplan">
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+                        <div class="item">
+                            <label>Madplanens navn:</label><br />
+                            <input id="foodplan-name" type="text"><br />
+                        </div>
+                        
                         <label>Vælg retter:</label><br />
                         <div class="item">
                             <label>Søg ret..</label><br />
