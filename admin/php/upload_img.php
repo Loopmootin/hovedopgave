@@ -1,5 +1,9 @@
 <?php
 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
 require_once('../php/db_con.php');
 
     if(isset($_FILES["file"]["type"])) {
@@ -7,10 +11,12 @@ require_once('../php/db_con.php');
         $name = filter_input(INPUT_POST, 'dishName')
             or die('Missing/illegal title parameter!!!');
 
-        $foodItem = filter_input_array(INPUT_POST, 'foodItem')
-            or die('Missing/illegal title parameter!!!');
+        $foodItems = filter_input(INPUT_POST, 'foodItems')
+            or die('Missing/illegal food parameter!!!');
+        
+        echo $foodItems;
 
-        $validextensions = array("jpeg", "jpg", "png");
+        $validextensions = array("jpeg", "jpg", "png", "JPEG", "JPG", "PNG");
         $temporary = explode(".", $_FILES["file"]["name"]);
         $file_extension = end($temporary);
         $target_dir = "../img/";
@@ -40,23 +46,25 @@ require_once('../php/db_con.php');
             $stmt = $con->prepare($sql);
             $stmt->bind_param('ss', $name, $target_file);
             $stmt->execute();
+            $latest_id = $con->insert_id;
             if ($stmt->affected_rows > 0){
-                echo 'Filedata added to the database :-)';
+                echo 'Dish added to the database :-)';
+
             } else {
-                echo 'Could not add the file to the database ';
-                echo $name;
+                echo 'Could not add the Dish to the database ';
             }
 
-            foreach ($foodItem as $value) {
+            echo $latest_id;
+
+            foreach ($foodItems as $value) {
                 $sql = 'INSERT INTO food_item_has_dish(food_item_food_id, dish_dish_id) VALUES(?, ?)';
                 $stmt = $con->prepare($sql);
-                $stmt->bind_param('ii', $foodItem, $did);
+                $stmt->bind_param('ii', $value, $latest_id);
                 $stmt->execute();
                 if ($stmt->affected_rows > 0){
-                    echo 'Filedata added to the database :-)';
+                    echo 'Food items added to the dish :-)';
                 } else {
-                    echo 'Could not add the file to the database ';
-                    echo $name;
+                    echo 'Could not add Food items to the dish ';
                 }
             }
 

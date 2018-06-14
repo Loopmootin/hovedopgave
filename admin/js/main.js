@@ -119,6 +119,7 @@ $(document).ready(function () {
                 $("#message").html(data);
             }
         });
+        console.log(dishName);
         console.log(foodItems);
     });
 
