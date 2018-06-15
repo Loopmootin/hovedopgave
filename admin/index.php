@@ -20,9 +20,8 @@
 
     <?php
         require_once('php/db_con.php');
-        include('php/header.php');
+        include('php/header.php');        
     ?>
-
 
     <div class="container">
         <div class="container-item">
@@ -97,10 +96,10 @@
                     <h2>Lav en Madplan</h2>
                 </div>
                 <div class="create-foodplan">
-                    <form id="create-foodplan" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+                    <form id="make-foodplan" action="" method="post">
                         <div class="item">
                             <label>Madplanens navn:</label><br />
-                            <input id="foodplan-name" type="text"><br />
+                            <input id="foodplan-name" type="text" required><br />
                         </div>
                         
                         <label>Vælg retter:</label><br />
@@ -128,24 +127,3 @@
     <script src="js/main.js"></script>
     </body>
 </html>
-
-
-<!-- 
-    <div class="item-check">
-        <div class="half-block">
-            <label for="cb-diary">Diary</label><br />
-            <input id="cb-diary" type="checkbox"><br />
-
-            <label for="cb-gluten">Gluten</label><br />
-            <input id="cb-gluten" type="checkbox"><br />
-        </div>
-        
-        <div class="half-block">
-            <label for="cb-fruit">Fruit</label><br />
-            <input id="cb-fruit" type="checkbox"><br />
-
-            <label for="cb-vegetable">Vegetable</label><br />
-            <input id="cb-vegetable" type="checkbox"><br />
-        </div>
-    </div>
--->

@@ -8,7 +8,7 @@
   
     while($stmt->fetch()){
         echo '<tr>';
-        echo '<td> <input class="foodplan-checkbox" type="checkbox" value="'. $did .'">' . $dish_name . '</td>';
+        echo '<td> <input name="food-dishes" class="foodplan-checkbox" type="checkbox" value="'. $did .'">' . $dish_name . '</td>';
         echo '</tr>';
     }
 

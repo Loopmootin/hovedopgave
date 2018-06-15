@@ -63,8 +63,6 @@ $(document).ready(function () {
                     productPrice: productPrice,
                     productSubmit: productSubmit
                 }, function (response) {
-            if (response == 'success') {
-            }
         }, 'json').fail(function (response) {
             console.log('no response food item');
         });
@@ -117,32 +115,30 @@ $(document).ready(function () {
     });
 
 
-///////////////////CREATE FOODPLAN/////////////////////
+    ///////////////////CREATE FOODPLAN/////////////////////
 
-
-    $("#create-foodplan").submit(function (f) {
-        f.preventDefault();
-        
+    $("#make-foodplan").submit(function (eve) {
+        eve.preventDefault();
         var foodplanName = $("#foodplan-name").val();
+        var foodplanSubmit = $("#foodplan-submit").val();
         var dishes = [];
         $(".foodplan-checkbox:checked").each(function () {
             dishes.push($(this).val());
         });
-        var foodplanSubmit = $("#foodplan-submit").val();
+
         console.log(dishes);
 
         $.post('php/create_foodplan.php', {
             foodplanName: foodplanName,
-            dishes: dishes,
-            foodplanSubmit: foodplanSubmit
+            foodplanSubmit: foodplanSubmit,
+            dishes: dishes
         }, function (response) {
-            if (response == 'success') {
-            }
         }, 'json').fail(function (response) {
-            console.log('no response foodplan');
+            console.log('no response food item');
         });
 
         $("#foodplan-name").val("");
+
     });
 
 
@@ -166,4 +162,7 @@ $(document).ready(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
+
+
+
 });
