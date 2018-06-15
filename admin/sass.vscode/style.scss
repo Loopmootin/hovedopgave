@@ -17,10 +17,11 @@ body {
     }
 }
 
-$my-text: #222;
-$my-red: red;
-$my-green: #adca88;
-$my-blue: blue;
+$my-white: #EBF5EE;
+$my-green: #2B4141;
+$my-red: #D30019;
+$my-silver: #A1A6B4;
+$my-blue: #A4BAB7;
 
 $large-size: 1200px;
 $medium-size: 800px;
@@ -29,80 +30,25 @@ $small-size: 420px;
 
 ///////////////////////// MENU /////////////////////////
 
-.menu {
-    width: 100%;
-    height: 80px;
-    background-color: $my-green;
+.navbar {
+    background-color: $my-blue;
+    padding: 10px 5%;
     margin-bottom: 40px;
-    .menu-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        float: right;
-        height: 80px;
-        width: 20%;
-        a {
-            text-decoration: none;
-            width: 100%;
-            color: $my-text;
-            text-align: center;
-            padding: 30px 0;
-            &:hover {
-                cursor: pointer;
-                text-decoration: underline !important;
+    .navbar-nav {
+        margin-left: auto;
+        @media only screen and (max-width: 992px) {
+            position: relative;
+            a {
+                text-align: center;
             }
         }
-        .selected {
-            text-decoration: underline;
+    }
+    .navbar-brand {
+        .coop-logo {
+            width: 160px;
         }
     }
 }
-
-.menu-mobile {
-    display: none;
-    width: 100%;
-    height: 80px;
-    background-color: $my-green;
-    margin-bottom: 40px;
-    h2 {
-        top: 25px;
-        right: 30px;
-        position: absolute;
-    }
-    :first-child {
-        padding-top: 80px;
-    }
-    .menu-item-mobile {
-        display: none;
-        height: 80px;
-        width: 100%;
-        background-color: $my-green;
-        text-align: center;
-        a {
-            text-decoration: none;
-            width: 100%;
-            color: $my-text;
-            text-align: center;
-            padding: 30px 0;
-            :hover {
-                cursor: pointer;
-            }
-        }
-        .selected {
-            text-decoration: underline;
-        }
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .menu {
-        display: none;
-    }
-    .menu-mobile {
-        display: block;
-    }
-}
-
 
 
 //////////////////// ITEM CONTAINERS ////////////////////
@@ -115,12 +61,12 @@ $small-size: 420px;
         display: block;
         .container-form {
             width: 60%;
-            margin: 0 auto;
-            outline: 1px solid #eee;
+            margin: 10px auto;
+            outline: 2px solid #000;
             position: relative;
             z-index: 1;
             .exp-bar {
-                outline: 1px solid #eee;
+                outline: 2px solid #000;
                 padding-left: 40px;
                 h2 {
                     text-align: center;
@@ -157,12 +103,12 @@ $small-size: 420px;
                 width: calc(100% - 120px);
                 margin: -7px auto 0 auto;
                 padding: 20px;
-                border-left: 1px solid #eee;
-                border-right: 1px solid #eee;
+                border-left: 2px solid #000;
+                border-right: 2px solid #000;
                 .item {
                     position: relative;
                     label {
-                        color: $my-text;
+                        color: #000;
                         position: absolute;
                         top: 45px;
                         left: 12.5%;
@@ -186,7 +132,7 @@ $small-size: 420px;
                     input[type=text] {
                         margin: 10px auto;
                         padding: 12px 12px;
-                        border: 1px solid #eee;
+                        border: 2px solid #000;
                         border-radius: 4px;
                         width: 80%;
                         min-width: 200px;

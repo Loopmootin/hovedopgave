@@ -13,88 +13,27 @@ body p {
   font-size: 16px;
 }
 
-.menu {
-  width: 100%;
-  height: 80px;
-  background-color: #adca88;
+.navbar {
+  background-color: #A4BAB7;
+  padding: 10px 5%;
   margin-bottom: 40px;
 }
 
-.menu .menu-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  float: right;
-  height: 80px;
-  width: 20%;
+.navbar .navbar-nav {
+  margin-left: auto;
 }
 
-.menu .menu-item a {
-  text-decoration: none;
-  width: 100%;
-  color: #222;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.menu .menu-item a:hover {
-  cursor: pointer;
-  text-decoration: underline !important;
-}
-
-.menu .menu-item .selected {
-  text-decoration: underline;
-}
-
-.menu-mobile {
-  display: none;
-  width: 100%;
-  height: 80px;
-  background-color: #adca88;
-  margin-bottom: 40px;
-}
-
-.menu-mobile h2 {
-  top: 25px;
-  right: 30px;
-  position: absolute;
-}
-
-.menu-mobile :first-child {
-  padding-top: 80px;
-}
-
-.menu-mobile .menu-item-mobile {
-  display: none;
-  height: 80px;
-  width: 100%;
-  background-color: #adca88;
-  text-align: center;
-}
-
-.menu-mobile .menu-item-mobile a {
-  text-decoration: none;
-  width: 100%;
-  color: #222;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.menu-mobile .menu-item-mobile a :hover {
-  cursor: pointer;
-}
-
-.menu-mobile .menu-item-mobile .selected {
-  text-decoration: underline;
-}
-
-@media only screen and (max-width: 650px) {
-  .menu {
-    display: none;
+@media only screen and (max-width: 992px) {
+  .navbar .navbar-nav {
+    position: relative;
   }
-  .menu-mobile {
-    display: block;
+  .navbar .navbar-nav a {
+    text-align: center;
   }
+}
+
+.navbar .navbar-brand .coop-logo {
+  width: 160px;
 }
 
 .container {
@@ -109,14 +48,14 @@ body p {
 
 .container .container-item .container-form {
   width: 60%;
-  margin: 0 auto;
-  outline: 1px solid #eee;
+  margin: 10px auto;
+  outline: 2px solid #000;
   position: relative;
   z-index: 1;
 }
 
 .container .container-item .container-form .exp-bar {
-  outline: 1px solid #eee;
+  outline: 2px solid #000;
   padding-left: 40px;
 }
 
@@ -154,8 +93,8 @@ body p {
   width: calc(100% - 120px);
   margin: -7px auto 0 auto;
   padding: 20px;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
 }
 
 .container .container-item .container-form form .item {
@@ -163,7 +102,7 @@ body p {
 }
 
 .container .container-item .container-form form .item label {
-  color: #222;
+  color: #000;
   position: absolute;
   top: 45px;
   left: 12.5%;
@@ -173,7 +112,7 @@ body p {
 .container .container-item .container-form form .item .custom-file {
   padding: 7px 12px;
   border-radius: 4px;
-  background: #adca88;
+  background: #2B4141;
   color: #fff;
   border: none;
   margin: 10px auto;
@@ -189,7 +128,7 @@ body p {
 .container .container-item .container-form form .item input[type=text] {
   margin: 10px auto;
   padding: 12px 12px;
-  border: 1px solid #eee;
+  border: 2px solid #000;
   border-radius: 4px;
   width: 80%;
   min-width: 200px;
@@ -205,7 +144,7 @@ body p {
 .container .container-item .container-form form input[type=submit] {
   padding: 12px 12px;
   border-radius: 4px;
-  background: #adca88;
+  background: #2B4141;
   color: #fff;
   border: none;
   margin: 10px auto;
@@ -231,7 +170,7 @@ body p {
   position: absolute;
   bottom: -40px;
   height: 40px;
-  background: #adca88;
+  background: #2B4141;
   width: 100%;
   text-align: center;
   z-index: 200;

@@ -1,34 +1,19 @@
-
+		
 		<?php
 			$fn = basename($_SERVER['PHP_SELF']);
 		?>
 		
-		<div class="menu">
-			<div class="menu-item">
-				<a class="<?= ($fn=='contact.php')?'selected':''?>" href="contact.php">Kontakt</a>
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="#"><img class="coop-logo" src="img/coop-logo.png" alt="coop logo"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+				<a class="nav-item nav-link <?= ($fn=='index.php')?'active':''?>" href="index.php">Hjem</a>
+				<a class="nav-item nav-link <?= ($fn=='guide.php')?'active':''?>" href="guide.php">Video Guide</a>
+				<a class="nav-item nav-link <?= ($fn=='discount.php')?'active':''?>" href="discount.php">Tilbud</a>
+				<a class="nav-item nav-link <?= ($fn=='login.php')?'active':''?>" href="#" data-toggle="modal" data-target="#login-modal">Log ind</a>
+				</div>
 			</div>
-
-			<div class="menu-item">
-				<a class="<?= ($fn=='booking.php')?'selected':''?>" href="booking.php">Billetbestilling</a>
-			</div>
-
-			<div class="menu-item">
-				<a class="<?= ($fn=='index.php')?'selected':''?>" href="index.php">Hjem</a>
-			</div>	
-		</div>
-
-
-		<div class="menu-mobile">
-			<div class="menu-item-mobile">
-				<a class="<?= ($fn=='contact.php')?'selected':''?>" href="contact.php">Kontakt</a>
-			</div>
-
-			<div class="menu-item-mobile">
-				<a class="<?= ($fn=='booking.php')?'selected':''?>" href="booking.php">Billetbestilling</a>
-			</div>
-
-			<div class="menu-item-mobile">
-				<a class="<?= ($fn=='index.php')?'selected':''?>" href="index.php">Hjem</a>
-			</div>
-			<h2 id="burger-menu">≡</h2>
-		</div>
+		</nav>

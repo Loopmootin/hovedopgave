@@ -9,16 +9,16 @@ require_once('../php/db_con.php');
     if(isset($_FILES["file"]["type"])) {
 
         $name = filter_input(INPUT_POST, 'dishName')
-            or die('Missing/illegal title parameter!!!');
+            or die('Missing/illegal title parameter!!!<br>');
 
         $foodItems = filter_input(INPUT_POST, 'foodItems')
-            or die('Missing/illegal food parameter!!!');
+            or die('Missing/illegal food parameter!!!<br>');
 
-        echo $foodItems;
+        echo 'food items '.$foodItems.'<br>';
 
-        $foodArray = array($foodItems);
+        $foodArray = explode( ",", $foodItems);
 
-        echo json_encode($foodArray);
+        echo json_encode($foodArray).'<br>';
 
         $validextensions = array("jpeg", "jpg", "png", "JPEG", "JPG", "PNG");
         $temporary = explode(".", $_FILES["file"]["name"]);
@@ -44,7 +44,7 @@ require_once('../php/db_con.php');
             $sourcePath = $_FILES['file']['tmp_name']; // Storing source path of the file in a variable
             $targetPath = "../img/".$_FILES['file']['name']; // Target path where file is to be stored
             move_uploaded_file($sourcePath,$targetPath) ; // Moving Uploaded file
-            echo "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
+            echo "<span id='success'>Image Uploaded Successfully!</span><br/>";
             
             $sql = 'INSERT INTO dish(name, image) VALUES(?, ?)';
             $stmt = $con->prepare($sql);
@@ -52,23 +52,24 @@ require_once('../php/db_con.php');
             $stmt->execute();
             $latest_id = $con->insert_id;
             if ($stmt->affected_rows > 0){
-                echo 'Dish added to the database :-)';
+                echo 'Dish added to the database :-)<br>';
 
             } else {
-                echo 'Could not add the Dish to the database ';
+                echo 'Could not add the Dish to the database <br>';
             }
 
-            echo $latest_id;
+            echo 'dish id from latest upload '.$latest_id.'<br>';
 
             foreach ($foodArray as $arrayItem) {
+                echo 'Array item'.$arrayItem.'<br>';
                 $sql = 'INSERT INTO food_item_has_dish(food_item_food_id, dish_dish_id) VALUES(?, ?)';
                 $stmt = $con->prepare($sql);
                 $stmt->bind_param('ii', $arrayItem, $latest_id);
                 $stmt->execute();
                 if ($stmt->affected_rows > 0){
-                    echo 'Food items added to the dish :-)';
+                    echo 'Food items added to the dish :-)<br>';
                 } else {
-                    echo 'Could not add Food items to the dish ';
+                    echo 'Could not add Food items to the dish <br>';
                 }
             }
 
@@ -80,4 +81,3 @@ require_once('../php/db_con.php');
     }
 
 ?>
-
