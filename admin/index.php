@@ -97,7 +97,7 @@
                     <h2>Lav en Madplan</h2>
                 </div>
                 <div class="create-foodplan">
-                    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+                    <form id="create-foodplan" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                         <div class="item">
                             <label>Madplanens navn:</label><br />
                             <input id="foodplan-name" type="text"><br />
@@ -110,12 +110,12 @@
                             <table>
                                 <tbody id="food-table">
                                     <?php
-                                        include('php/create_foodplan.php');
+                                        include('php/show_dishes.php');
                                     ?> 
                                 </tbody>
                             </table>
                         </div>
-                        <input type="submit" name="Create" value="submit">
+                        <input id="foodplan-submit" type="submit" name="Create" value="submit">
                     </form>
                 </div>
             </div>

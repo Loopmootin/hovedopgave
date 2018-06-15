@@ -101,7 +101,7 @@ $(document).ready(function () {
         formData.append('foodItems', foodItems);
 
         $.ajax({
-            url: "php/upload_img.php", // Url to which the request is send
+            url: "php/create_dish.php", // Url to which the request is send
             type: "POST", // Type of request to be send, called as method
             data: formData,
             contentType: false, // The content type used when sending data to the server.
@@ -116,6 +116,34 @@ $(document).ready(function () {
         console.log(foodItems);
     });
 
+
+///////////////////CREATE FOODPLAN/////////////////////
+
+
+    $("#create-foodplan").submit(function (f) {
+        f.preventDefault();
+        
+        var foodplanName = $("#foodplan-name").val();
+        var dishes = [];
+        $(".foodplan-checkbox:checked").each(function () {
+            dishes.push($(this).val());
+        });
+        var foodplanSubmit = $("#foodplan-submit").val();
+        console.log(dishes);
+
+        $.post('php/create_foodplan.php', {
+            foodplanName: foodplanName,
+            dishes: dishes,
+            foodplanSubmit: foodplanSubmit
+        }, function (response) {
+            if (response == 'success') {
+            }
+        }, 'json').fail(function (response) {
+            console.log('no response foodplan');
+        });
+
+        $("#foodplan-name").val("");
+    });
 
 
  ///////////////////SEARCH FOOD ITEMS/////////////////////
