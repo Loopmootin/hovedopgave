@@ -73,7 +73,7 @@
         <div class="food-crates">
 
             <?php 
-                include('php/load_foodplans.php');
+                //include('php/load_foodplans.php');
             ?>
 
             <div class="crate-item">
