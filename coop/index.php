@@ -71,26 +71,9 @@
         </div>
 
         <div class="food-crates">
-            <!--<div class="crate-item">
-                <div class="crate-text left">
-                    <h3>Den Vegetariske</h3>
-                    <h4>Prøv vores vegetariske Måltidskasse</h4>
-                    <p><strong>Mandag:</strong> Vegetar Lasagne</p>
-                    <p><strong>Tirsdag:</strong> Bagte rødder og beder orange i frø</p>
-                    <p><strong>Onsdag:</strong> Citrusmarieneret kål med yoghurtbagte rodfrugter</p>
-                    <p><strong>Torsdag:</strong> Emmergryns-kåldolmere med pebercoulis</p>
-                    <p><strong>Fredag:</strong> Jordskokkesuppe med friteret porre</p>
-                    <p><strong>Lørdag:</strong> Broccolitærte med løg</p>
-                    <p><strong>Søndag:</strong> Tofu og græskar bagt i krydret miso</p>
-                </div>
-                <div class="crate-img right"> 
-                    <img src="img/food-wide.jpg" alt="den vegetariske billede">
-                </div>
-            </div>-->
 
             <?php 
                 include('php/load_foodplans.php');
-                include('php/load_dishes.php');
             ?>
 
             <div class="crate-item">
