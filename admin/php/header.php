@@ -10,9 +10,6 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-				<a class="nav-item nav-link <?= ($fn=='index.php')?'active':''?>" href="index.php">Hjem</a>
-				<a class="nav-item nav-link <?= ($fn=='guide.php')?'active':''?>" href="guide.php">Video Guide</a>
-				<a class="nav-item nav-link <?= ($fn=='discount.php')?'active':''?>" href="discount.php">Tilbud</a>
 				<a class="nav-item nav-link <?= ($fn=='login.php')?'active':''?>" href="#" data-toggle="modal" data-target="#login-modal">Log ind</a>
 				</div>
 			</div>

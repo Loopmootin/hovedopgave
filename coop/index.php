@@ -18,7 +18,7 @@
     <body>
 
     <?php
-        include('disclaimer-modal.php');
+        //include('disclaimer-modal.php');
         require_once('php/db_con.php');
         include('php/header.php');
         include('login-modal.php');
@@ -71,7 +71,7 @@
         </div>
 
         <div class="food-crates">
-            <div class="crate-item">
+            <!--<div class="crate-item">
                 <div class="crate-text left">
                     <h3>Den Vegetariske</h3>
                     <h4>Prøv vores vegetariske Måltidskasse</h4>
@@ -86,7 +86,13 @@
                 <div class="crate-img right"> 
                     <img src="img/food-wide.jpg" alt="den vegetariske billede">
                 </div>
-            </div>
+            </div>-->
+
+            <?php 
+                include('php/load_foodplans.php');
+                include('php/load_dishes.php');
+            ?>
+
             <div class="crate-item">
                 <div class="crate-img left "> 
                     <img src="img/food-kids.jpg" alt="den børnevenlige billede">
