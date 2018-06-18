@@ -23,12 +23,12 @@
     <body>
 
     <?php
-        require_once('php/db_con.php');
-        include('php/header.php');  
+        require_once('php/db_con.php');  
         include('login-modal.php');      
-    
+        include('php/header.php');
+
         if(empty($_SESSION['pid'])) {
-            echo '<h2>Du skal være logget ind for at kunne oprette Måltidskasser</h2>';
+            echo '<h2 class="login-message">Du skal være logget ind for at kunne oprette Måltidskasser</h2>';
         } else {
     
     ?>

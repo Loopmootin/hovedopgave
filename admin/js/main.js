@@ -96,7 +96,7 @@ $(document).ready(function () {
 
     ///////////////////LOGIN USER/////////////////////
 
-
+/*
     $("#login-user").submit(function (a) {
         a.preventDefault();
         var loginUserMail = $("#login-user-mail").val();
@@ -114,7 +114,7 @@ $(document).ready(function () {
         $("#login-user-mail").val("");
         $("#login-user-password").val("");
     });
-
+*/
 
 
 
@@ -135,6 +135,7 @@ $(document).ready(function () {
                     productPrice: productPrice,
                     productSubmit: productSubmit
                 }, function (response) {
+
         }, 'json').fail(function (response) {
             console.log('no response food item');
         });
