@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +24,13 @@
 
     <?php
         require_once('php/db_con.php');
-        include('php/header.php');        
+        include('php/header.php');  
+        include('login-modal.php');      
+    
+        if(empty($_SESSION['pid'])) {
+            echo '<h2>Du skal være logget ind for at kunne oprette Måltidskasser</h2>';
+        } else {
+    
     ?>
 
     <div class="container">
@@ -119,9 +129,36 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-item">
+            <div class="container-form">
+                <div class="exp-bar">
+                    <img class="plus-icon" src="img/plus-icon-2.png" alt="plus icon">
+                    <h2>Slet en madplan</h2>
+                </div>
+                <div class="create-foodplan">
+                    <form id="delete-foodplan" action="" method="post">
+                        <label>Vælg madplan:</label><br />
+                        <div class="item">
+                            <label>Søg madplan..</label><br />
+                            <input id="search-foodplan" type="text">
+                            <table>
+                                <tbody id="foodplan-table">
+                                    <?php
+                                        include('php/show_foodplans.php');
+                                    ?> 
+                                </tbody>
+                            </table>
+                        </div>
+                        <input id="foodplan-show-submit" type="submit" name="Create" value="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <?php
+    }
         //include('php/footer.php');
     ?> 
     <script src="js/main.js"></script>

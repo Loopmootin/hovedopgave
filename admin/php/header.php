@@ -10,7 +10,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-				<a class="nav-item nav-link <?= ($fn=='login.php')?'active':''?>" href="#" data-toggle="modal" data-target="#login-modal">Log ind</a>
+				<?php 
+				if(empty($_SESSION['pid'])) { ?>
+					<a class="nav-item nav-link <?= ($fn=='login.php')?'active':''?>" href="#" data-toggle="modal" data-target="#login-modal">Log ind</a>
+				<?php } else { ?>
+					<a class="nav-item nav-link <?= ($fn=='login.php')?'active':''?>" href="#" data-toggle="modal" data-target="#login-modal">Log ud</a>
+				<?php } ?>	
 				</div>
 			</div>
 		</nav>

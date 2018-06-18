@@ -45,6 +45,78 @@ $(document).ready(function () {
         }
     });
 
+    $("input[type=password]").focus(function () {
+        $(this).siblings("label").css({
+            fontSize: 10,
+            top: 35,
+            transition: "0.5s"
+        });
+    });
+
+    $("input[type=password]").blur(function () {
+        if (!this.value) {
+            $(this).siblings("label").css({
+                fontSize: 16,
+                top: 45,
+                transition: "0.5s"
+            });
+        }
+    });
+
+
+
+    ///////////////////CREATE USER/////////////////////
+
+
+    $("#create-user").submit(function (a) {
+        a.preventDefault();
+        var userName = $("#user-name").val();
+        var userMail = $("#user-mail").val();
+        var userPass = $("#user-password").val();
+        var useraddress = $("#user-address").val();
+        var userSubmit = $("#user-submit").val();
+
+        $.post('php/create_user.php', {
+            userName: userName,
+            userMail: userMail,
+            userPass: userPass,
+            useraddress: useraddress,
+            userSubmit: userSubmit
+        }, function (response) {
+        }, 'json').fail(function (response) {
+            console.log('no response food item');
+        });
+
+        $("#user-name").val("");
+        $("#user-mail").val("");
+        $("#user-password").val("");
+        $("#user-address").val("");
+    });
+
+
+    ///////////////////LOGIN USER/////////////////////
+
+
+    $("#login-user").submit(function (a) {
+        a.preventDefault();
+        var loginUserMail = $("#login-user-mail").val();
+        var loginUserPassword = $("#login-user-password").val();
+        var loginUserSubmit = $("#login-user-submit").val();
+
+        $.post('php/login_user.php', {
+            loginUserMail: loginUserMail,
+            loginUserPassword: loginUserPassword,
+            loginUserSubmit: loginUserSubmit
+        }, function (response) {}, 'json').fail(function (response) {
+            console.log('no response food item');
+        });
+
+        $("#login-user-mail").val("");
+        $("#login-user-password").val("");
+    });
+
+
+
 
     ///////////////////CREATE PRODUCT/////////////////////
 
@@ -115,7 +187,7 @@ $(document).ready(function () {
     });
 
 
-    ///////////////////CREATE FOODPLAN/////////////////////
+///////////////////CREATE FOODPLAN/////////////////////
 
     $("#make-foodplan").submit(function (eve) {
         eve.preventDefault();
@@ -138,6 +210,28 @@ $(document).ready(function () {
         });
 
         $("#foodplan-name").val("");
+
+    });
+
+
+///////////////////DELETE FOODPLAN/////////////////////
+
+    $("#delete-foodplan").submit(function (f) {
+        f.preventDefault();
+        var foodplanShowSubmit = $("#foodplan-show-submit").val();
+        var foodplans = [];
+        $(".foodplans-checkbox:checked").each(function () {
+            foodplans.push($(this).val());
+        });
+
+        console.log(foodplans);
+
+        $.post('php/delete_foodplan.php', {
+            foodplanShowSubmit: foodplanShowSubmit,
+            foodplans: foodplans
+        }, function (response) {}, 'json').fail(function (response) {
+            console.log('no response food item');
+        });
 
     });
 

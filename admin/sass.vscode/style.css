@@ -36,6 +36,71 @@ body p {
   width: 160px;
 }
 
+.create-user form, .login-user form {
+  width: 100%;
+  margin: -7px auto 0 auto;
+  padding: 20px;
+}
+
+.create-user form .item, .login-user form .item {
+  position: relative;
+}
+
+.create-user form .item label, .login-user form .item label {
+  color: #000;
+  position: absolute;
+  top: 45px;
+  left: 12.5%;
+  pointer-events: none;
+}
+
+.create-user form .item .custom-file, .login-user form .item .custom-file {
+  padding: 7px 12px;
+  border-radius: 4px;
+  background: #2B4141;
+  color: #fff;
+  border: none;
+  margin: 10px auto;
+  display: block;
+  min-width: 80px;
+  width: 80%;
+  pointer-events: auto;
+  position: static;
+  text-align: center;
+}
+
+.create-user form .item input[type=number],
+.create-user form .item input[type=password],
+.create-user form .item input[type=text], .login-user form .item input[type=number],
+.login-user form .item input[type=password],
+.login-user form .item input[type=text] {
+  margin: 10px auto;
+  padding: 12px 12px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  width: 80%;
+  min-width: 200px;
+  display: block;
+}
+
+.create-user form .item input[type=number]::-webkit-inner-spin-button,
+.create-user form .item input[type=number]::-webkit-outer-spin-button, .login-user form .item input[type=number]::-webkit-inner-spin-button,
+.login-user form .item input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.create-user form input[type=submit], .login-user form input[type=submit] {
+  padding: 12px 12px;
+  border-radius: 4px;
+  background: #2B4141;
+  color: #fff;
+  border: none;
+  margin: 10px auto;
+  display: block;
+  min-width: 80px;
+}
+
 .container {
   position: static;
   display: block;
