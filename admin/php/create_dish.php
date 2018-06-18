@@ -1,8 +1,8 @@
 <?php
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+   // ini_set('display_errors', 1);
+   // ini_set('display_startup_errors', 1);
+   // error_reporting(E_ALL);
 
 require_once('../php/db_con.php');
 
@@ -14,11 +14,11 @@ require_once('../php/db_con.php');
         $foodItems = filter_input(INPUT_POST, 'foodItems')
             or die('Missing/illegal food parameter!!!<br>');
 
-        echo 'food items '.$foodItems.'<br>';
+        //echo 'food items '.$foodItems.'<br>';
 
         $foodArray = explode( ",", $foodItems);
 
-        echo json_encode($foodArray).'<br>';
+        //echo json_encode($foodArray).'<br>';
 
         $validextensions = array("jpeg", "jpg", "png", "JPEG", "JPG", "PNG");
         $temporary = explode(".", $_FILES["file"]["name"]);
@@ -52,22 +52,22 @@ require_once('../php/db_con.php');
             $stmt->execute();
             $latest_id = $con->insert_id;
             if ($stmt->affected_rows > 0){
-                echo 'Dish added to the database :-)<br>';
+               // echo 'Dish added to the database :-)<br>';
 
             } else {
                 echo 'Could not add the Dish to the database <br>';
             }
 
-            echo 'dish id from latest upload '.$latest_id.'<br>';
+            //echo 'dish id from latest upload '.$latest_id.'<br>';
 
             foreach ($foodArray as $arrayItem) {
-                echo 'Array item'.$arrayItem.'<br>';
+                //echo 'Array item'.$arrayItem.'<br>';
                 $sql = 'INSERT INTO food_item_has_dish(food_item_food_id, dish_dish_id) VALUES(?, ?)';
                 $stmt = $con->prepare($sql);
                 $stmt->bind_param('ii', $arrayItem, $latest_id);
                 $stmt->execute();
                 if ($stmt->affected_rows > 0){
-                    echo 'Food items added to the dish :-)<br>';
+                   // echo 'Food items added to the dish :-)<br>';
                 } else {
                     echo 'Could not add Food items to the dish <br>';
                 }
