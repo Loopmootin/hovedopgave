@@ -28,9 +28,11 @@
         include('php/header.php');
 
         if(empty($_SESSION['pid'])) {
-            echo '<h2 class="login-message">Du skal være logget ind for at kunne oprette Måltidskasser</h2>';
+                echo '<h2 class="login-message">Du skal være logget ind for at kunne oprette Måltidskasser</h2>';
         } else {
-    
+            if ($_SESSION['pid'] !== 2) {
+                echo '<h2 class="login-message">Du har ikke administrativ adgang</h2>';
+            } else {
     ?>
 
     <div class="container">
@@ -158,6 +160,7 @@
     </div>
 
     <?php
+        }
     }
         //include('php/footer.php');
     ?> 
