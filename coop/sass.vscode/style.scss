@@ -50,8 +50,64 @@ $small-size: 420px;
 
 
 ///////////////////////// LOGIN MODAL /////////////////////////
-
-
+.create-user,
+.login-user {
+    form {
+        width: 100%;
+        margin: -7px auto 0 auto;
+        padding: 20px;
+        .item {
+            position: relative;
+            label {
+                color: #000;
+                position: absolute;
+                top: 45px;
+                left: 12.5%;
+                pointer-events: none;
+            }
+            .custom-file {
+                padding: 7px 12px;
+                border-radius: 4px;
+                background: $my-green;
+                color: #fff;
+                border: none;
+                margin: 10px auto;
+                display: block;
+                min-width: 80px;
+                width: 80%;
+                pointer-events: auto;
+                position: static;
+                text-align: center;
+            }
+            input[type=number],
+            input[type=password],
+            input[type=text] {
+                margin: 10px auto;
+                padding: 12px 12px;
+                border: 2px solid #000;
+                border-radius: 4px;
+                width: 80%;
+                min-width: 200px;
+                display: block;
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        input[type=submit] {
+            padding: 12px 12px;
+            border-radius: 4px;
+            background: $my-green;
+            color: #fff;
+            border: none;
+            margin: 10px auto;
+            display: block;
+            min-width: 80px;
+        }
+    }
+}
 
 
 ///////////////////////// HOME & CONTAINER /////////////////////////
@@ -70,10 +126,13 @@ $small-size: 420px;
         text-align: center;
     }
     .food-crates {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
         .crate-item {
-            width: 100%;
             display: flex;
-            flex-direction: row;
+            width: calc(100% * (1/2) - 10px);
+            margin: 5px;
             align-items: center;
             .crate-text {
                 display: inline-block;
@@ -87,6 +146,16 @@ $small-size: 420px;
                 }
                 h4 {
                     margin-bottom: 15px;
+                }
+                input[type=submit] {
+                    padding: 12px 12px;
+                    border-radius: 4px;
+                    background: $my-green;
+                    color: #fff;
+                    border: none;
+                    margin: 10px auto;
+                    display: block;
+                    min-width: 80px;
                 }
             }
             .crate-img {
@@ -121,12 +190,6 @@ $small-size: 420px;
                     width: 100%;
                     display: block;
                     position: relative;
-                }
-                .left {
-                    margin-right: 0;
-                }
-                .right {
-                    margin-left: 0;
                 }
             }
         }
