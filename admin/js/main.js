@@ -211,7 +211,6 @@ $(document).ready(function () {
         });
 
         $("#foodplan-name").val("");
-
     });
 
 

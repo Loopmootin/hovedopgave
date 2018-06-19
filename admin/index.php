@@ -152,7 +152,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <input id="foodplan-show-submit" type="submit" name="Create" value="submit">
+                        <input id="foodplan-show-submit" type="submit" name="delete" value="Slet">
                     </form>
                 </div>
             </div>
