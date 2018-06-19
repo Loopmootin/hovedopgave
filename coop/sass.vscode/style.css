@@ -163,26 +163,17 @@ body p {
   min-width: 80px;
 }
 
-.container .food-crates .crate-item .crate-img {
-  display: inline-block;
-  margin-bottom: 10px;
-  flex-grow: 1;
-  width: calc(100% * (1/2) - 10px);
-  overflow: hidden;
+.container .food-crates .crate-item .crate-text .carousel .carousel-inner {
+  height: 350px;
 }
 
-.container .food-crates .crate-item .crate-img img {
-  height: 110%;
-  margin-left: 50%;
-  transform: translateX(-50%);
+.container .food-crates .crate-item .crate-text .carousel .carousel-inner .carousel-item img {
+  min-height: 350px;
+  width: auto;
 }
 
-.container .food-crates .crate-item .left {
-  margin-right: 5px;
-}
-
-.container .food-crates .crate-item .right {
-  margin-left: 5px;
+.container .food-crates .crate-item .crate-text .carousel .carousel-inner .carousel-item .carousel-caption {
+  top: 20px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -190,17 +181,12 @@ body p {
     display: block;
     position: relative;
     margin-bottom: 10px;
-    height: 100%;
+    width: 100%;
   }
   .container .food-crates .crate-item .crate-text {
-    width: 100%;
     display: block;
-    position: relative;
-  }
-  .container .food-crates .crate-item .crate-img {
-    width: 100%;
-    display: block;
-    position: relative;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 

@@ -119,6 +119,10 @@ $(document).ready(function () {
         });
     }); 
 
+    ///////////////////DISH CAROUSEL/////////////////////
+
+    $('.carousel-inner :first-child').addClass('active');
+
 
 });
 
