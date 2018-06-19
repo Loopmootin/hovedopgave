@@ -32,16 +32,14 @@
         <div class="container">
             <div class="jumbotron intro">
                 <h1>Måltidskassen fra Coop</h1>
-                <h4>Vælg mellem fire smagfulde måltidskasser</h4>
+                <h4>Vælg mellem de smagfulde måltidskasser</h4>
                 <p>Indkøb og madlavning har aldrig været nemmere eller sjovere. Med måltidskasserne fra Coop.dk MAD slipper du for at skulle finde på idéer til aftensmaden. Vi klarer det hele for dig!</p>
             </div>
 
             <div class="food-crates">
-
                 <?php 
-                    //include('php/load_foodplans.php');
+                    include('php/load_foodplans.php');
                 ?>
-
             </div>
         </div>
 
